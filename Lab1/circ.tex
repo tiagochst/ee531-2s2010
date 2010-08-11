@@ -1,0 +1,52 @@
+% quick.m4
+\psset{unit=1in,cornersize=absolute,dimen=middle}%
+\begin{pspicture}(-0.041667,-0.02)(1.770833,0.868056)%
+% dpic version 16.Jul.10 option -p for PSTricks 0.93a or later
+\psset{linewidth=0.8pt}%
+\psset{linewidth=0.8pt}%
+\ifx\MPSTPatchA\undefined{\makeatletter\def\psbezier@ii{\addto@pscode{%
+\ifshowpoints true \else false \fi\tx@OpenBezier%
+\ifshowpoints\tx@BezierShowPoints\fi}\end@OpenObj}\makeatother%
+\global\def\MPSTPatchA{}}\fi%
+\psset{arrowsize=1.1pt 4,arrowlength=1.64,arrowinset=0}%
+\psline(0,0)(-0,0.25)
+(-0,0.25)(-0.041667,0.270833)
+(-0.041667,0.270833)(0.041667,0.3125)
+(0.041667,0.3125)(-0.041667,0.354167)
+(-0.041667,0.354167)(0.041667,0.395833)
+(0.041667,0.395833)(-0.041667,0.4375)
+(-0.041667,0.4375)(0.041667,0.479167)
+(0.041667,0.479167)(0,0.5)
+(0,0.5)(0,0.75)
+\uput{2.5bp}[r](0.041667,0.375){$ Ra$}
+\psline(0,0.75)(0.35,0.75)
+\psline(0.35,0.666667)(0.35,0.833333)
+\psline(0.4,0.666667)(0.4,0.833333)
+\psline(0.4,0.75)(0.75,0.75)
+\uput{2.5bp}[u](0.375,0.833333){$ Ca$}
+\pscircle[fillstyle=solid,fillcolor=black](0.75,0.75){0.02}
+\psline(0.75,0.75)(0.75,0.5)
+\pscircle(0.75,0.375){0.125}
+\psline(0.75,0.25)(0.75,0)
+\uput{2.5bp}[ur](0.75,0.5){$ +$}
+\uput{2.5bp}[r](0.875,0.375){$ v_s$}
+\uput{2.5bp}[dr](0.75,0.25){$ -$}
+\pscircle[fillstyle=solid,fillcolor=black](0.75,0){0.02}
+\psline(0.75,0.75)(0.9375,0.75)
+\psline(0.9375,0.75)(1.1875,0.75)
+(1.1875,0.75)(1.208333,0.791667)
+(1.208333,0.791667)(1.25,0.708333)
+(1.25,0.708333)(1.291667,0.791667)
+(1.291667,0.791667)(1.333333,0.708333)
+(1.333333,0.708333)(1.375,0.791667)
+(1.375,0.791667)(1.416667,0.708333)
+(1.416667,0.708333)(1.4375,0.75)
+(1.4375,0.75)(1.6875,0.75)
+\uput{2.5bp}[d](1.3125,0.708333){$ Rb$}
+\psline(1.6875,0.75)(1.6875,0.4)
+\psline(1.604167,0.4)(1.770833,0.4)
+\psline(1.604167,0.35)(1.770833,0.35)
+\psline(1.6875,0.35)(1.6875,0)
+\uput{2.5bp}[l](1.604167,0.375){$ Cb$}
+\psline(1.6875,0)(0,0)
+\end{pspicture}%
