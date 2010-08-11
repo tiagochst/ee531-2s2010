@@ -24,6 +24,12 @@
 \usepackage{multicol}   
 \usepackage[linkbordercolor={1 1 1},urlcolor=black,colorlinks=true]{hyperref} % links
 
+% circuito eletrico
+\usepackage{electComp}
+\usetikzlibrary{decorations,decorations.pathmorphing,decorations.pathreplacing}
+\usepackage{verbatim}
+\usepackage{pstricks}
+
 
 % Capa estilizada %
 \newcommand*{\titleTMB}{\begingroup \centering \settowidth{\unitlength}{\LARGE EE531} {\large\scshape EE531 - Turma S}\\[0.2\baselineskip] \rule{11.0cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} \rule{11.0cm}{0.4pt}\\[\baselineskip] {\LARGE  Familizarização com instrumentos de medida}\vspace*{\baselineskip}  {\itshape Laboratório de Eletrônica Básica I - Segundo Semestre de 2010}\\ \rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} \rule{11.0cm}{1.6pt}\\[\baselineskip] {\large\scshape Professor: José Cândido Silveira Santos Filho}\par \vfill {\normalsize   \scshape 
@@ -96,6 +102,15 @@ $V_{rms}$ & 2.88v V \tabularnewline
 \caption{Dados experimentais obtidos através do recurso measure \label{tab:measure}}
 
 \end{table}
+
+\begin{table}[h]
+\centerline{\input circ.tex}
+\caption{Circuito \label{tab:circ}}
+\end{table}
+
+ 
+
+
 
 
 \end{document}
