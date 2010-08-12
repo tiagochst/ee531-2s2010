@@ -18,6 +18,7 @@
 
 
 %%% outros %%%
+\usepackage{multirow}
 \usepackage{textcomp}
 \usepackage{color}       
 \usepackage{indentfirst}      % retira padrao americano de paragrafos
@@ -131,7 +132,7 @@ Os valores obtidos através do recurso cursor com os dos obtidos com o do recurs
 
 
 %
-\begin{table}
+\begin{table}[h]
 \begin{centering}
 \begin{tabular}{|c|c|c|c|}
 \hline 
@@ -159,10 +160,10 @@ Valor mínimo &  &  & \tabularnewline
 
 
 
-Em seguida, foi aplicado um sinal senoidal de amplitude $10V_{pp}$, um offset de 0V e variou-se a frequência conforme a tabela \ref{tab:measure}. 
+Em seguida, foi aplicado um sinal senoidal de amplitude $10V_{pp}$, um offset de 0V e variou-se a frequência conforme a tabela \ref{tab:var-freq}. 
 
 %
-\begin{table}
+\begin{table}[h]
 \begin{centering}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline 
@@ -171,16 +172,21 @@ Nó & Frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
 \hline 
 1 & Amplitude pico-a-pico &  &  &  &  &  & \tabularnewline
 \hline 
+\multirow{3}{*}{2}
  & Amplitude pico-a-pico &  &  &  &  &  & \tabularnewline
 \cline{2-8} 
-2 & \multicolumn{1}{c|}{Ganho em dB} &  &  &  &  &  & \tabularnewline
-\hline 
+ & \multicolumn{1}{c|}{Ganho em dB} &  &  &  &  &  & \tabularnewline
+\cline{2-8} 
+
  & Fase relativa ao nó 1 &  &  &  &  &  & \tabularnewline
 \hline 
-3 & Amplitude pico-a-pico &  &  &  &  &  & \tabularnewline
-\hline 
+\multirow{3}{*}{3}
+ & Amplitude pico-a-pico &  &  &  &  &  & \tabularnewline
+\cline{2-8} 
+ 
  & Ganho em dB &  &  &  &  &  & \tabularnewline
-\hline 
+\cline{2-8} 
+ 
  & Fase relativa ao nó 1 &  &  &  &  &  & \tabularnewline
 \hline
 \end{tabular}
