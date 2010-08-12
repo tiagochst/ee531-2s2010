@@ -44,9 +44,6 @@
 \begin{document}
 \titleTMB 
 \newpage
-\section{Dados experimentais}
-Os dados obtidos da tabela \ref{tab:cursors} e da tabela \ref{tab:measure}...
-
 %Amplitude pico-à-pico 9.8 V
 %período 100 micros
 %tempo de subida
@@ -62,6 +59,18 @@ Os dados obtidos da tabela \ref{tab:cursors} e da tabela \ref{tab:measure}...
 %Prd 100 micro
 %Rise 42 micro seg
 %Fall 42 micro seg
+
+
+Para este experimento inicial da disciplina de laboratório de eletrônica básica I, tem-se como objetivo a familiarização dos alunos com os diversos instrumentos que serão utilizados ao longo do curso. Estas ferramentas são a fonte de alimentação dual, um gerador de funções e um osciloscópio digital. Para este presente experimento utilizam-se ainda um protoboard, dois resistores de 
+$100k\Omega$ e dois capacitores de $100pF$. 
+	
+
+\section*{Parte Experimental}
+\begin{itemize}
+\item Para esta parte inicial do experimento, a saída do gerador de funções é conectada ao canal 1 do osciloscópio. O gerador é ajustado para produzir um sinal de tensão com sua forma de onda triangular, com amplitude 10$V_{pp}$, com offset de $0V$ e freqüência de $10kHz$. 
+ 
+Com o recurso cursor do osciloscópio, foi medida a amplitude de pico-a-pico, o período, o tempo de subida e o tempo de descida do sinal de tensão. Tais dados encontram-se na tabela \ref{tab:cursors}. 
+
 
 \begin{table}[h]
 \begin{centering}
@@ -81,6 +90,8 @@ Tempo de descida  & 40$\mu s$\tabularnewline
 
 \end{table}
 
+
+Em seguida, os mesmos valores da tabela 1 foram medidos, porém usando-se o recurso measure, além de também ser necessário medir o valor médio e o valor RMS (ambos os valores obtidos também com o recurso measure). Tais dados encontram-se na tabela \ref{tab:measure} . 
 
 
 \begin{table}[h]
@@ -103,14 +114,79 @@ $V_{rms}$ & 2.88v V \tabularnewline
 
 \end{table}
 
-\begin{table}[h]
+Os valores obtidos através do recurso cursor com os dos obtidos com o do recurso measure são valores bem semelhantes e próximo um do outro, com a diferença de que os dados adquiridos com o cursor são menos precisos do que os do medidos com o mesure.
+
+\item Para a segunda parte do experimento, calcula-se a frequência de corte para cada filtro do circuito esquemático da figura 1, na qual o circuito à esquerda da fonte de sinal é um filtro passa-altas com constante de tempo simples (CTS), e à direita da fonte é um circuito passa-baixas, também CTS. 
+
+
+\begin{figure}[h]
 \centerline{\input circ.tex}
 \caption{Circuito \label{tab:circ}}
+\end{figure}
+
+
+\item Para a parte três, foi montado, no protoboard, o circuito da figura do item anterior. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e frequência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuou-se as medidas necessárias, completando a tabela \label{tab:nova_tab} (tabela de medidas de filtro CTS).
+\end{itemize}
+
+
+
+%
+\begin{table}
+\begin{centering}
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Nó & 1 & 2 & 3\tabularnewline
+\hline
+\hline 
+Amplitude pico-a-pico &  &  & \tabularnewline
+\hline 
+Valor médio &  &  & \tabularnewline
+\hline 
+Valor RMS &  &  & \tabularnewline
+\hline 
+Valor máximo &  &  & \tabularnewline
+\hline 
+Valor mínimo &  &  & \tabularnewline
+\hline
+\end{tabular}
+\par\end{centering}
+
+\caption{Medidas do filtro CTS \label{tab:Medidas-do-filtro}}
+
 \end{table}
 
- 
 
 
+
+
+Em seguida, foi aplicado um sinal senoidal de amplitude $10V_{pp}$, um offset de $0V$ e varoiu-se a frequência conforme a tabela \label{tab:measure}. 
+
+%
+\begin{table}
+\begin{centering}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline 
+Nó & Frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
+\hline
+\hline 
+1 & Amplitude pico-a-pico &  &  &  &  &  & \tabularnewline
+\hline 
+ & Amplitude pico-a-pico &  &  &  &  &  & \tabularnewline
+\cline{2-8} 
+2 & \multicolumn{1}{c|}{Ganho em dB} &  &  &  &  &  & \tabularnewline
+\hline 
+ & Fase relativa ao nó 1 &  &  &  &  &  & \tabularnewline
+\hline 
+3 & Amplitude pico-a-pico &  &  &  &  &  & \tabularnewline
+\hline 
+ & Ganho em dB &  &  &  &  &  & \tabularnewline
+\hline 
+ & Fase relativa ao nó 1 &  &  &  &  &  & \tabularnewline
+\hline
+\end{tabular}
+\par\end{centering}
+
+\caption{Medidas realizadas variando-se a frequência do sinal \label{tab:var-freq}}
 
 
 \end{document}
