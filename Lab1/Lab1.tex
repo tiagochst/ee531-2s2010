@@ -15,7 +15,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[brazil]{babel}    % dá suporte para os termos na língua portuguesa do Brasi
 \usepackage[utf8]{inputenc}   % acentuação
-\usepackage{ae,aecompl}       % pdfs mais bonitos =)
+\usepackage{ae,aecompl,aeguill}       % pdfs mais bonitos =)
 
 %%% outros %%%
 \usepackage{multirow}
@@ -88,9 +88,11 @@ Tempo de descida  & 40$\mu s$\tabularnewline
 \par\end{centering}
 
 \caption{Dados experimentais obtidos através do recurso cursor \label{tab:cursors}}
-
 \end{table}
 
+Ao configurar o canal para medida a.c. e, posteriomente, para medida c.c, não se constatou grandes diferenças entre os valores. Ou seja, ao aplicar um 
+filtro sobre o sinal de entrada, de forma a obter somente sua componente variável, verificou-se que a componente contínua do sinal é mínima. \\
+Além disso, ao alterar a tensão de offset para 1 volts, a componente contínua do sinal de entrada aumentou 2 volts, e ao alterar para -1 volt e tensão de pico diminui 2 volts. 
 
 Em seguida, os mesmos valores da tabela \ref{tab:cursors} foram medidos, porém usando-se o recurso measure, além de também ser necessário medir o valor médio e o valor RMS (ambos os valores obtidos também com o recurso measure). Tais dados encontram-se na tabela \ref{tab:measure} . 
 
@@ -117,16 +119,29 @@ $V_{rms}$ & 2,88V \tabularnewline
 
 Os valores obtidos através do recurso cursor com os dos obtidos com o do recurso measure são valores bem semelhantes e próximo um do outro, com a diferença de que os dados adquiridos com o cursor são menos precisos do que os do medidos com o measure.
 
-\item Para a segunda parte do experimento, calcula-se a frequência de corte para cada filtro do circuito esquemático da figura 1, na qual o circuito à esquerda da fonte de sinal é um filtro passa-altas com constante de tempo simples (CTS), e à direita da fonte é um circuito passa-baixas, também CTS. 
+\item Para a segunda parte do experimento, calcula-se, através da equação 1,
+\vspace{1mm}
+
+\begin{equation}
+ f_{c}=\frac{1}{2\pi RC}\\
+\end{equation}
+
+\vspace{2mm}
 
 
+ a freqüência de corte para cada filtro do circuito esquemático da figura \ref{tab:circ}, na qual o circuito à esquerda da fonte de sinal é um filtro passa-altas com constante de tempo simples (CTS), e à direita da fonte é um circuito passa-baixas, também CTS. Assim, obtém-se para os circuitos uma frequência de corte equivalente a 15,92 KHz.
+
+
+\vspace{3mm}
 \begin{figure}[h]
 \centerline{\input circ.tex}
 \caption{Circuito \label{tab:circ}}
 \end{figure}
 
+\vspace{2mm}
 
-\item Para a parte três, foi montado, no protoboard, o circuito da figura do ítem anterior. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e frequência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuou-se as medidas necessárias, completando a tabela \ref{tab:Medidas-do-filtro} (tabela de medidas de filtro CTS).
+
+\item Para a parte três, foi montado, no protoboard, o circuito da figura do ítem anterior. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e freqüência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuou-se as medidas necessárias, completando a tabela \ref{tab:Medidas-do-filtro} (tabela de medidas de filtro CTS).
 \end{enumerate}
 
 
@@ -156,21 +171,19 @@ Valor mínimo & -4,96V  & -3,16V  & -3.24V \tabularnewline
 
 \end{table}
 
-
-
-
-
-Em seguida, foi aplicado um sinal senoidal de amplitude $10V_{pp}$, um offset de 0V e variou-se a frequência conforme a tabela \ref{tab:var-freq}. 
+Em seguida, foi aplicado um sinal senoidal de amplitude $10V_{pp}$, um offset de 0V e variou-se a freqüência conforme a tabela \ref{tab:var-freq}. 
+Ao diminuir a freqüência de entrada $V_{in}$, a amplitude do sinal no nó 3 diminui enquanto no nó 2 aumenta. Além disso, a fase no nó 2 aumenta, alcançando, em baixas freqüências, uma fase de 90$^{\circ}$,enquanto no nó 3 a fase diminui alcançando, em baixas freqüências, uma fase de  0$^{\circ}$.
+Por outro lado, ao aumentar a freqüência de entrada $V_{in}$, a amplitude do sinal no nó 3 aumenta, enquanto no nó 2 diminui, e a fase no nó 2 diminui, alcançando em altas freqüências uma fase de 0$^{\circ}$, já no nó 3, a fase diminui, alcançando, em altas freqüências, uma fase de 90$^{\circ}$.   
 
 %
 \begin{table}[h]
 \begin{centering}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline 
-Nó & Frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
+Nó & freqüência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
 \hline
 \hline 
-1 & Amplitude pico-a-pico & 10,2V & 10,2V  & 10,2V & 10,2V & 10,2V  & \tabularnewline
+1 & Amplitude pico-a-pico & 10,2V & 10,2V  & 10,2V & 10,2V & 10,2V  &10,2V \tabularnewline
 \hline 
 \multirow{3}{*}{2}
  & Amplitude pico-a-pico & 100mV & 656mV & 4,8V & 6,24V & 8,40V & 8,48V \tabularnewline
@@ -178,7 +191,7 @@ Nó & Frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
  & \multicolumn{1}{c|}{Ganho em dB} & -40,17 & -23,83  & -6,55 & -4,27  & -1,69  & -1,60 \tabularnewline
 \cline{2-8} 
 
- & Fase relativa ao nó 1 & 90 & 86  & 56  & 41  & 7  & 0 \tabularnewline
+ & Fase relativa ao nó 1 & $90^{\circ}$ & $86^{\circ}$  & $56^{\circ}$  & $41^{\circ}$  & $7^{\circ}$  & $0^{\circ}$ \tabularnewline
 \hline 
 \multirow{3}{*}{3}
  & Amplitude pico-a-pico & 10,4v & 9,8V & 7,76V & 6,32V  & 1,42V  & 180mV \tabularnewline
@@ -187,12 +200,12 @@ Nó & Frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
  & Ganho em dB &  0,17 & -0,35  & -2,37 & -4,16 & -17,13 & -35,07\tabularnewline
 \cline{2-8} 
  
- & Fase relativa ao nó 1 & 0 & -3 & -36  & -46  & -72  & -90 \tabularnewline
+ & Fase relativa ao nó 1 & $0^{\circ}$ & $-3^{\circ}$ & $-36^{\circ}$  & $-46^{\circ}$  & $-72^{\circ}$  & $-90^{\circ}$ \tabularnewline
 \hline
 \end{tabular}
 \par\end{centering}
 
-\caption{Medidas realizadas variando-se a frequência do sinal \label{tab:var-freq}}
+\caption{Medidas realizadas variando-se a freqüência do sinal \label{tab:var-freq}}
 \end{table}
 
 \end{document}
