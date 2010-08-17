@@ -87,6 +87,8 @@ Com o recurso cursor do osciloscópio, foi medida a amplitude de pico-a-pico, o 
 
 \begin{table}[h]
 \begin{centering}
+\caption{Dados experimentais obtidos através do recurso cursor \label{tab:cursors}}
+
 \begin{tabular}{cc}
 \hline 
 Descrição & Valor\tabularnewline
@@ -99,7 +101,6 @@ Tempo de descida  & 40$\mu s$\tabularnewline
 \end{tabular}
 \par\end{centering}
 
-\caption{Dados experimentais obtidos através do recurso cursor \label{tab:cursors}}
 \end{table}
 
 Ao configurar o canal para medida a.c. e, posteriomente, para medida c.c, não se constatou grandes diferenças entre os valores. Ou seja, ao aplicar um 
@@ -116,6 +117,7 @@ Em seguida, os mesmos valores da tabela \ref{tab:cursors} foram medidos, porém 
 
 \begin{table}[h]
 \begin{centering}
+\caption{Dados experimentais obtidos através do recurso measure \label{tab:measure}}
 \begin{tabular}{cc}
 \hline 
 Descrição & Valor\tabularnewline
@@ -129,7 +131,6 @@ $V_{rms}$ & 2,88V \tabularnewline
 \hline
 \end{tabular}
 \par\end{centering}
-\caption{Dados experimentais obtidos através do recurso measure \label{tab:measure}}
 \end{table}
 \newpage
 Os valores obtidos através do recurso cursor com os dos obtidos com o do recurso measure são valores bem semelhantes e próximo um do outro, com a diferença de que os dados adquiridos com o cursor são menos precisos do que os do medidos com o measure.
@@ -157,7 +158,6 @@ Os valores obtidos através do recurso cursor com os dos obtidos com o do recurs
 
 
 \item Para a parte três, foi montado, no protoboard, o circuito da figura do item anterior. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e frequência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuou-se as medidas necessárias, completando a tabela \ref{tab:Medidas-do-filtro} (tabela de medidas de filtro CTS).
-\end{enumerate}
 
 \begin{figure}[h]
 \begin{centering}
@@ -168,6 +168,7 @@ Os valores obtidos através do recurso cursor com os dos obtidos com o do recurs
 %
 \begin{table}[h]
 \begin{centering}
+\caption{Medidas do filtro CTS \label{tab:Medidas-do-filtro}}
 \begin{tabular}{|c|c|c|c|}
 \hline 
 Nó & 1 & 2 & 3\tabularnewline
@@ -186,17 +187,23 @@ Valor mínimo & -4,96V  & -3,16V  & -3.24V \tabularnewline
 \end{tabular}
 \par\end{centering}
 
-\caption{Medidas do filtro CTS \label{tab:Medidas-do-filtro}}
 
 \end{table}
 
-Em seguida, foi aplicado um sinal senoidal de amplitude $10V_{pp}$, com offset de 0V e variou-se a frequência conforme a tabela \ref{tab:var-freq}. 
-Ao diminuir a frequência de entrada $V_{in}$, a amplitude do sinal no nó 3 aumenta enquanto no nó 2 diminui. Além disso, a fase no nó 2 aumenta, alcançando, em baixas frequências, uma fase de 90$^{\circ}$,enquanto no nó 3 a fase diminui alcançando, em baixas freqüências, uma fase de  0$^{\circ}$.
-Por outro lado, ao aumentar a frequência de entrada $V_{in}$, a amplitude do sinal no nó 3 aumenta, enquanto no nó 2 diminui, e a fase no nó 2 diminui, alcançando em altas frequências uma fase de 0$^{\circ}$, já no nó 3, a fase diminui, alcançando, em altas frequências, uma fase de 90$^{\circ}$.   
+\item                Em seguida, aplicando-se um sinal senoidal de amplitude  $10V_{pp}$, um offset de 0V e variando-se a frequência segundo a tabela \ref{tab:var-freq}, obtiveram-se os dados contidos na mesma tabela (tabela 4). Em baixas frequências,  a fase no nó 2 aumenta sendo o seu máximo, para os casos considerados, de 90$^{\circ}$. Já o nó 3 apresenta uma diminuição na fase. Para a mínima frequencia considerada, sua fase é de 0$^{\circ}$.  Aumentando-se a frequência, a fase do nó 2 relativa ao nó 1 diminui e, para a máxima frequencia, ela atinge uma fase mínima de 0$^{\circ}$. Diferentemente a este nó, a fase relativa do nó 3 em relação ao nó 1 aumenta – em módulo – atingindo 90$^{\circ}$ para  a frequencia de 1MHz.
+                Com relação a variação na frequência de entrada $V_{in}$, quando há um aumento em sua frequência, a amplitude (pico a pico) do nó 2 aumenta,  enquanto que a do nó 3 diminui.  
+
+
+
+
+%Em seguida, foi aplicado um sinal senoidal de amplitude $10V_{pp}$, com offset de 0V e variou-se a frequência conforme a tabela \ref{tab:var-freq}. 
+%Ao diminuir a frequência de entrada $V_{in}$, a amplitude do sinal no nó 3 aumenta enquanto no nó 2 diminui. Além disso, a fase no nó 2 aumenta, alcançando, em baixas frequências, uma fase de 90$^{\circ}$,enquanto no nó 3 a fase diminui alcançando, em baixas freqüências, uma fase de  0$^{\circ}$.
+%Por outro lado, ao aumentar a frequência de entrada $V_{in}$, a amplitude do sinal no nó 3 aumenta, enquanto no nó 2 diminui, e a fase no nó 2 diminui, alcançando em altas frequências uma fase de 0$^{\circ}$, já no nó 3, a fase diminui, alcançando, em altas frequências, uma fase de 90$^{\circ}$.   
 
 %
 \begin{table}[h]
 \begin{centering}
+\caption{Medidas realizadas variando-se a frequência do sinal \label{tab:var-freq}}
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline 
 Nó & frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
@@ -224,14 +231,18 @@ Nó & frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
 \end{tabular}
 \par\end{centering}
 
-\caption{Medidas realizadas variando-se a frequência do sinal \label{tab:var-freq}}
 \end{table}
 
+\item Ao comparar um circuito passa-baixa e um passa-alta determina-se que as diferenças de fases, independentemente da frequência, vale 90 $-3^{\circ}$.
+Portanto, quando o valor do sinal em um circuito estiver em seu máximo, no outro estará no zero. Assim, ao realizar uma diferença de nas medidas da tensão diferencial entre o nó 2 e o nó 3, devemos obter uma senóide cujo pico valha a soma do maior dos picos entre as ondas no nós 2 e 3. Como o valor pico-a-pico do nó 2 vale 4,80V e no nó 3 7,76V, o valor pico a pico da onda resultante da diferença entre elas possuiria valor de 7,76V.
+Contudo, conforme a figura \ref{fig:Fig-45}, a diferença de fase obtida é um pouco maior que $90^{\circ}$. Logo o valor pico a pico ficou um pouco acima do esperado, atingido em módulo 9,12V, o que pode ser explicado já que ao aumentar a diferença entre as fases, quando um está no máximo o outro está  abaixo do eixo das abscissas, o que incrementa o valor da senóide resultante.        
 
 \begin{figure}[h]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/45}\caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
+\includegraphics[scale=0.7]{Imagens/45} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
 \par\end{centering}
 \end{figure}
+
+\end{enumerate}
 
 \end{document}
