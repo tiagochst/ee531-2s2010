@@ -42,7 +42,7 @@
         Raquel Mayumi Kawamoto & RA: 086003\\
         Tiago Chedraoui Silva  & RA: 082941\\
       \end{tabular} \end{center}
-    \itshape \today   }\\[\baselineskip] \vspace{3.2pt} \endgroup}
+    \itshape 20 de agosto de 2010    }\\[\baselineskip] \vspace{3.2pt} \endgroup}
 
 
 \begin{document}
@@ -70,8 +70,9 @@ $100k\Omega$ e dois capacitores de $100pF$.
 	
 
 \section*{Parte Experimental}
-\begin{enumerate}
-\item Para esta parte inicial do experimento, a saída do gerador de funções é conectada ao canal 1 do osciloscópio. O gerador é ajustado para produzir um sinal de tensão com sua forma de onda triangular, com amplitude 10$V_{pp}$, com offset de $0V$ e frequência de $10kHz$. 
+%\begin{enumerate}
+%\item
+1. Para esta parte inicial do experimento, a saída do gerador de funções é conectada ao canal 1 do osciloscópio. O gerador é ajustado para produzir um sinal de tensão com sua forma de onda triangular, com amplitude 10$V_{pp}$, com offset de $0V$ e frequência de $10kHz$. 
  
 Com o recurso \textit{cursor} do osciloscópio, foi medida a amplitude de pico-a-pico, o período, o tempo de subida e o tempo de descida do sinal de tensão. Tais dados encontram-se na tabela \ref{tab:cursors}. 
 
@@ -107,20 +108,21 @@ Tempo de descida  & 40$\mu s$\tabularnewline
 \end{table}
 
 %Ao configurar o canal para medida a.c., no qual o sinal é filtrado de forma a obter somente a componente variável do sinal, e, posteriomente, configurar para medida c.c, não se constatou grandes diferenças entre os valores.
-Para comparar as componentes contínuas e variáveis de um sinal, é possível configurar o canal tanto para medidas a.c, no qual o sinal é filtrado de forma a obter somente a componente variável do sinal, quanto para c.c, no qual o sinal contém tanto a componente variável quanto contínua. Utilizando ambas configurações, não se constatou grandes diferenças entre os sinais, ou seja, componente contínua do sinal é pequena. \\
-Além disso, ao alterar a tensão de offset para 1 volts, a componente contínua do sinal de entrada aumentou 2 volts, e ao alterar para -1 volts, a componente contínua do sinal de entrada diminui 2 volts. 
+Para comparar as componentes contínuas e variáveis de um sinal, é possível configurar o canal tanto para medidas a.c, no qual o sinal é filtrado de forma a obter somente a componente variável do sinal, quanto para c.c, no qual o sinal contém tanto a componente variável quanto contínua. Utilizando ambas as configurações, não se constatou grandes diferenças entre os sinais, ou seja, a componente contínua do sinal é pequena. 
 
-Em seguida, os mesmos valores da tabela \ref{tab:cursors} foram medidos, porém usando-se o recurso measure (figura \ref{fig:Fig-1}), além de também ser necessário medir o valor médio e o valor RMS (ambos os valores obtidos também com o recurso measure). Tais dados encontram-se na tabela \ref{tab:measure} .\\ 
+Além disso, ao alterar a tensão de offset para 1 volt, a componente contínua do sinal de entrada aumentou 2 volts, e ao alterar para -1 volt, a componente contínua do sinal de entrada diminui 2 volts. 
+
+Em seguida, as mesmas medidas para as características da tabela \ref{tab:cursors} foram refeitas , porém usando-se o recurso \textit{measure} (figura \ref{fig:Fig-1}), além de também ser necessário medir o valor médio e o valor RMS (ambos os valores obtidos também com o recurso \textit{measure}). Tais dados encontram-se na tabela \ref{tab:measure} .\\ 
 
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/1}\caption{Caracterização da onda através do recurso measure \label{fig:Fig-1}}
+\includegraphics[scale=0.7]{Imagens/1}\caption{Caracterização da onda através do recurso \textit{measure} \label{fig:Fig-1}}
 \par\end{centering}
 \end{figure}
 
 \begin{table}[h]
 \begin{centering}
-\caption{Dados experimentais obtidos através do recurso measure \label{tab:measure}}
+\caption{Dados experimentais obtidos através do recurso \textit{measure} \label{tab:measure}}
 \begin{tabular}{cc}
 \hline 
 Descrição & Valor\tabularnewline
@@ -136,9 +138,10 @@ $V_{rms}$ & 2,88V \tabularnewline
 \par\end{centering}
 \end{table}
 \newpage
-Os valores obtidos através do recurso cursor com os dos obtidos com o do recurso measure são valores bem semelhantes e próximo um do outro, com a diferença de que os dados adquiridos com o cursor são menos precisos do que os do medidos com o measure.
+Os valores obtidos através do recurso \textit{cursor} com os dos obtidos com o do recurso \textit{measure} são valores bem semelhantes e próximos um do outro, com a diferença de que os dados adquiridos com o \textit{cursor}  são menos precisos do que os do medidos com o \textit{measure}.\\
 
-\item Para a segunda parte do experimento, calcula-se, através da equação 1,
+%\item
+2. Para a segunda parte do experimento, calcula-se, através da equação 1,
 \vspace{1mm}
 
 \begin{equation}
@@ -154,22 +157,23 @@ Os valores obtidos através do recurso cursor com os dos obtidos com o do recurs
 \vspace{3mm}
 \begin{figure}[h]
 \centerline{\input circ.tex}
-\caption{Circuito \label{tab:circ}}
+\caption{Filtros CTS \label{tab:circ}}
 \end{figure}
 
 \vspace{2mm}
 
 
-\item Para a parte três, foi montado, no protoboard, o circuito da figura do item anterior. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e frequência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuou-se as medidas necessárias, completando a tabela \ref{tab:Medidas-do-filtro} (tabela de medidas de filtro CTS).
+%\item
+3. Para a parte três, foi montado, no protoboard, o circuito da figura \ref{tab:circ}. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e frequência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuou-se as medidas necessárias, completando a tabela \ref{tab:Medidas-do-filtro} (tabela de medidas de filtro CTS).
 
-\begin{figure}[h]
+\begin{figure}[h!]
 \begin{centering}
 \includegraphics[scale=0.7]{Imagens/3}\caption{Sinal no nó 3 \label{fig:Fig-3}}
 \par\end{centering}
 \end{figure}
-
+\newpage
 %
-\begin{table}[h]
+\begin{table}[h!]
 \begin{centering}
 \caption{Medidas do filtro CTS \label{tab:Medidas-do-filtro}}
 \begin{tabular}{|c|c|c|c|}
@@ -193,7 +197,8 @@ Valor mínimo & -4,96V  & -3,16V  & -3.24V \tabularnewline
 
 \end{table}
 
-\item                Em seguida, aplicando-se um sinal senoidal de amplitude  $10V_{pp}$, um offset de 0V e variando-se a frequência segundo a tabela \ref{tab:var-freq}, obtiveram-se os dados contidos na mesma tabela (tabela 4). Em baixas frequências,  a fase no nó 2 aumenta sendo o seu máximo, para os casos considerados, de 90$^{\circ}$. Já o nó 3 apresenta uma diminuição na fase. Para a mínima frequencia considerada, sua fase é de 0$^{\circ}$.  Aumentando-se a frequência, a fase do nó 2 relativa ao nó 1 diminui e, para a máxima frequencia, ela atinge uma fase mínima de 0$^{\circ}$. Diferentemente a este nó, a fase relativa do nó 3 em relação ao nó 1 aumenta – em módulo – atingindo 90$^{\circ}$ para  a frequencia de 1MHz.
+%\item 
+4. Em seguida, aplicando-se um sinal senoidal de amplitude  $10V_{pp}$, um offset de 0V e variando-se a frequência segundo a tabela \ref{tab:var-freq}, obtiveram-se os dados contidos na mesma tabela (tabela 4). Em baixas frequências,  a fase no nó 2 aumenta sendo o seu máximo, para os casos considerados, de 90$^{\circ}$. Já o nó 3 apresenta uma diminuição na fase. Para a mínima frequencia considerada, sua fase é de 0$^{\circ}$.  Aumentando-se a frequência, a fase do nó 2 relativa ao nó 1 diminui e, para a máxima frequencia, ela atinge uma fase mínima de 0$^{\circ}$. Diferentemente a este nó, a fase relativa do nó 3 em relação ao nó 1 aumenta – em módulo – atingindo 90$^{\circ}$ para  a frequencia de 1MHz.
                 Com relação a variação na frequência de entrada $V_{in}$, quando há um aumento em sua frequência, a amplitude (pico a pico) do nó 2 aumenta,  enquanto que a do nó 3 diminui.  
 
 
@@ -236,7 +241,8 @@ Nó & frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
 
 \end{table}
 
-\item Ao comparar um circuito passa-baixa e um passa-alta determina-se que as diferenças de fases, independentemente da frequência, vale 90 $-3^{\circ}$.
+%\item
+5. Ao comparar um circuito passa-baixa e um passa-alta determina-se que as diferenças de fases, independentemente da frequência, vale 90 $-3^{\circ}$.
 Portanto, quando o valor do sinal em um circuito estiver em seu máximo, no outro estará no zero. Assim, ao realizar uma diferença de nas medidas da tensão diferencial entre o nó 2 e o nó 3, devemos obter uma senóide cujo pico valha a soma do maior dos picos entre as ondas no nós 2 e 3. Como o valor pico-a-pico do nó 2 vale 4,80V e no nó 3 7,76V, o valor pico a pico da onda resultante da diferença entre elas possuiria valor de 7,76V.
 Contudo, conforme a figura \ref{fig:Fig-45}, a diferença de fase obtida é um pouco maior que $90^{\circ}$. Logo o valor pico a pico ficou um pouco acima do esperado, atingido em módulo 9,12V, o que pode ser explicado já que ao aumentar a diferença entre as fases, quando um está no máximo o outro está  abaixo do eixo das abscissas, o que incrementa o valor da senóide resultante.        
 
@@ -246,6 +252,6 @@ Contudo, conforme a figura \ref{fig:Fig-45}, a diferença de fase obtida é um p
 \par\end{centering}
 \end{figure}
 
-\end{enumerate}
+%\end{enumerate}
 
 \end{document}
