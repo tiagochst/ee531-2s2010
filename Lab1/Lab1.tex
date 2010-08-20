@@ -24,15 +24,15 @@
 \usepackage{indentfirst}      % retira padrao americano de paragrafos
 \usepackage{multicol}   
 \usepackage[linkbordercolor={1 1 1},urlcolor=black,colorlinks=true]{hyperref} % links
+\usepackage{subfig}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,lmargin=3cm,rmargin=3cm}
 
 % circuito eletrico
 \usepackage{electComp}
 \usetikzlibrary{decorations,decorations.pathmorphing,decorations.pathreplacing}
 \usepackage{verbatim}
 \usepackage{pstricks}
-
-\usepackage[letterpaper]{geometry}
-\geometry{verbose,lmargin=3cm,rmargin=3cm}
 
 \date{Agosto 20, 2010}
 % Capa estilizada %
@@ -112,7 +112,7 @@ Para comparar as componentes contínuas e variáveis de um sinal, é possível c
 
 Além disso, ao alterar a tensão de offset para 1 volt, a componente contínua do sinal de entrada aumentou 2 volts, e ao alterar para -1 volt, a componente contínua do sinal de entrada diminui 2 volts. 
 
-Em seguida, as mesmas medidas para as características da tabela \ref{tab:cursors} foram refeitas , porém usando-se o recurso \textit{measure} (figura \ref{fig:Fig-1}), além de também ser necessário medir o valor médio e o valor RMS (ambos os valores obtidos também com o recurso \textit{measure}). Tais dados encontram-se na tabela \ref{tab:measure} .\\ 
+Em seguida, as mesmas medidas para as características da tabela \ref{tab:cursors} foram refeitas, porém usando-se o recurso \textit{measure} (figura \ref{fig:Fig-1}), além de também ser necessário medir o valor médio e o valor RMS (ambos os valores obtidos também com o recurso \textit{measure}). Tais dados encontram-se na tabela \ref{tab:measure} .\\ 
 
 \begin{figure}[h!]
 \begin{centering}
@@ -164,7 +164,7 @@ Os valores obtidos através do recurso \textit{cursor} com os dos obtidos com o 
 
 
 %\item
-3. Para a parte três, foi montado, no protoboard, o circuito da figura \ref{tab:circ}. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e frequência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuou-se as medidas necessárias, completando a tabela \ref{tab:Medidas-do-filtro} (tabela de medidas de filtro CTS).
+3. Para a parte três, foi montado, no protoboard, o circuito da figura \ref{tab:circ}. Inicialmente, a onda triangular foi substituída por uma onda senoidal de amplitude $10V_{pp}$, offset de $0V$ e frequência de $16kHz$. Este sinal foi aplicado ao nó 1 do circuito. Sendo assim, efetuaram-se as medidas necessárias, completando a tabela \ref{tab:Medidas-do-filtro} (tabela de medidas de filtro CTS).
 
 \begin{figure}[h!]
 \begin{centering}
@@ -241,12 +241,46 @@ Nó & frequência & 100 Hz & 1kHz & 10kHz & 16kHz & 100kHz & 1MHz\tabularnewline
 
 \end{table}
 
+
+Obteve-se a partir dos dados, os gráficos desenhados em folhas mono-log que foram anexadas ao relatório.
+
+Comparando-os aos gráficos teóricos (figuras \ref{fig:teo_low} e \ref{fig:teo_high}), percebe-se uma semelhança no comportamento tanto para a fase quanto para magnitude de ambos os filtros, apesar de existirem alguns pontos que diferem um pouco do teórico.   
+
+
+\begin{figure}[h!]
+\begin{centering}
+\subfloat[Magnitude]{\begin{centering}
+\includegraphics[scale=0.5]{Imagens/mag_low.eps}
+\par\end{centering}
+}\subfloat[Fase]{\begin{centering}
+\includegraphics[scale=0.5]{Imagens/fase_low.eps}
+\par\end{centering}
+}
+\par\end{centering}
+\caption{Gráficos teóricos de um Filtro CTS Passa Baixa \label{fig:teo_low}}
+\end{figure}
+
+\begin{figure}[h!]
+\begin{centering}
+\subfloat[Magnitudes]{\begin{centering}
+\includegraphics[scale=0.5]{Imagens/mag_h.eps}
+\par\end{centering}
+}\subfloat[Fase]{\begin{centering}
+\includegraphics[scale=0.5]{Imagens/fase_high.eps}
+\par\end{centering}
+}
+\par\end{centering}
+\caption{Gráficos teóricos Filtro CTS Passa Alta \label{fig:teo_high}}
+\end{figure}
+
+\newpage
 %\item
-5. Ao comparar um circuito passa-baixa e um passa-alta determina-se que as diferenças de fases, independentemente da frequência, vale 90 $-3^{\circ}$.
-Portanto, quando o valor do sinal em um circuito estiver em seu máximo, no outro estará no zero. Assim, ao realizar uma diferença de nas medidas da tensão diferencial entre o nó 2 e o nó 3, devemos obter uma senóide cujo pico valha a soma do maior dos picos entre as ondas no nós 2 e 3. Como o valor pico-a-pico do nó 2 vale 4,80V e no nó 3 7,76V, o valor pico a pico da onda resultante da diferença entre elas possuiria valor de 7,76V.
+5. Ao comparar um circuito passa-baixa com um passa-alta, determina-se que a diferença de fase, independentemente da frequência, vale $90^{\circ}$.
+Portanto, quando o valor do sinal em um circuito estiver em seu máximo, o outro estará no zero. Assim, ao realizar uma diferença nas medidas da tensão diferencial entre o nó 2 e o nó 3, deve-se obter uma senóide cujo valor de pico seja equivalente ao maior dos picos entre as ondas no nós 2 e 3. Como o valor pico-a-pico do nó 2 vale 4,80V e no nó 3 7,76V, o valor pico a pico da onda resultante da diferença entre elas possuiria valor de 7,76V.
 Contudo, conforme a figura \ref{fig:Fig-45}, a diferença de fase obtida é um pouco maior que $90^{\circ}$. Logo o valor pico a pico ficou um pouco acima do esperado, atingido em módulo 9,12V, o que pode ser explicado já que ao aumentar a diferença entre as fases, quando um está no máximo o outro está  abaixo do eixo das abscissas, o que incrementa o valor da senóide resultante.        
 
-\begin{figure}[h]
+
+\begin{figure}[h!]
 \begin{centering}
 \includegraphics[scale=0.7]{Imagens/45} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
 \par\end{centering}
