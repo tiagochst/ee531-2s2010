@@ -7,7 +7,7 @@ make:
 	latex $(file).tex
 	latex $(file).tex
 	dvips $(file).dvi -o
-	ps2pdf13 $(file).ps
+	ps2pdf13 -sPAPERSIZE=a4 $(file).ps
 show:
 	xpdf $(file).pdf
 clean:
