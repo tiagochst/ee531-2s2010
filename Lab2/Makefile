@@ -9,7 +9,7 @@ make:
 	dvips $(file).dvi -o
 	ps2pdf13 -sPAPERSIZE=a4 $(file).ps
 show:
-	xpdf $(file).pdf
+	evince $(file).pdf
 clean:
 	rm *.dvi *.aux *.out *.log
 circ1:
