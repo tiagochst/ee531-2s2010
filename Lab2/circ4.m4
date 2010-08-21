@@ -15,7 +15,7 @@ move left_ dim; dot
 capacitor(down_);rlabel(+,,-); dot
 {line right_ hlf; line down_ hlf*3;line left_ dim*3.0;ground();line up_ hlf ;}
 capacitor(down_);rlabel(+,,-)
-{line left_ dim*2.0;
+{line left_ dim*1.5;
 diode(up,K);
 }
 line right_ dim ;dot;
