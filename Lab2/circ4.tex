@@ -1,0 +1,59 @@
+\psset{unit=1in,cornersize=absolute,dimen=middle}%
+\begin{pspicture}(-0.159722,-0.4375)(1.77,1.02)%
+% dpic version 16.Jul.10 option -p for PSTricks 0.93a or later
+\psset{linewidth=0.8pt}%
+\psset{linewidth=0.8pt}%
+\ifx\MPSTPatchA\undefined{\makeatletter\def\psbezier@ii{\addto@pscode{%
+\ifshowpoints true \else false \fi\tx@OpenBezier%
+\ifshowpoints\tx@BezierShowPoints\fi}\end@OpenObj}\makeatother%
+\global\def\MPSTPatchA{}}\fi%
+\psset{arrowsize=1.1pt 4,arrowlength=1.64,arrowinset=0}%
+\psline(0,0)(0,0.125)
+\pscircle(0,0.25){0.125}
+\psarcn[linewidth=0.8pt](-0.041667,0.25){0.041667}{180}{0}
+\psarc[linewidth=0.8pt](0.041667,0.25){0.041667}{180}{360}
+\psline(0,0.375)(0,0.5)
+\uput{2.5bp}[l](-0.125,0.25){$ V_{in}$}
+\psline(0,0.5)(0.5,0.5)
+\pscircle[fillstyle=solid,fillcolor=black](0.5,0.5){0.02}
+\psline(0.5,0.5)(0.5,0.713916)
+\psline(0.5,0.786084)(0.458333,0.713916)
+(0.458333,0.713916)(0.541667,0.713916)
+(0.541667,0.713916)(0.5,0.786084)
+\psline(0.545718,0.786084)(0.454282,0.786084)
+\psline(0.5,0.786084)(0.5,1)
+\pscircle[fillstyle=solid,fillcolor=black](0.5,1){0.02}
+\psline(0.5,1)(1.75,1)
+\pscircle[fillstyle=solid,fillcolor=black](1.75,1){0.02}
+\pscircle[fillstyle=solid,fillcolor=black](1.25,1){0.02}
+\psline(1.25,1)(1.25,0.775)
+\psline(1.166667,0.775)(1.333333,0.775)
+\psline(1.166667,0.725)(1.333333,0.725)
+\psline(1.25,0.725)(1.25,0.5)
+\uput{2.5bp}[ul](1.25,0.775){$ +$}
+\uput{2.5bp}[dl](1.25,0.725){$ -$}
+\pscircle[fillstyle=solid,fillcolor=black](1.25,0.5){0.02}
+\psline(1.25,0.5)(1.5,0.5)
+\psline(1.5,0.5)(1.5,-0.25)
+\psline(1.5,-0.25)(0,-0.25)
+\psline(0,-0.25)(0,-0.375)
+\psline(0.083333,-0.375)(-0.083333,-0.375)
+\psline(0.055556,-0.40625)(-0.055556,-0.40625)
+\psline(0.035714,-0.4375)(-0.035714,-0.4375)
+\psline(0,-0.25)(0,0)
+\psline(1.25,0.5)(1.25,0.275)
+\psline(1.166667,0.275)(1.333333,0.275)
+\psline(1.166667,0.225)(1.333333,0.225)
+\psline(1.25,0.225)(1.25,0)
+\uput{2.5bp}[ul](1.25,0.275){$ +$}
+\uput{2.5bp}[dl](1.25,0.225){$ -$}
+\psline(1.25,0)(0.25,0)
+\psline(0.25,0)(0.25,0.213916)
+\psline(0.25,0.286084)(0.208333,0.213916)
+(0.208333,0.213916)(0.291667,0.213916)
+(0.291667,0.213916)(0.25,0.286084)
+\psline(0.295718,0.286084)(0.204282,0.286084)
+\psline(0.25,0.286084)(0.25,0.5)
+\psline(1.25,0)(1.75,0)
+\pscircle[fillstyle=solid,fillcolor=black](1.75,0){0.02}
+\end{pspicture}%

@@ -1,0 +1,80 @@
+%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
+% EE531: laboratório de Eletrônica Básica I       %  
+% Experimento 1: Familizarização com instrumentos %
+%                de medida                        %
+% Data:07/08/2010                                 %
+% Unicamp,Campinas,São Paulo,Brasil               % 
+% Grupo:                                          %
+%       - Raquel Mayumi Kawamoto                  %
+%       - Tiago Chedraoui Silva                   % 
+%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
+%\documentclass[letter]{article}  % formato impressao IC
+\documentclass[a4paper]{article} % formato impressao FEEC
+
+%%% fontes %%%
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}    % dá suporte para os termos na língua portuguesa do Brasi
+\usepackage[utf8]{inputenc}   % acentuação
+\usepackage{ae,aecompl,aeguill}       % pdfs mais bonitos =)
+
+%%% outros %%%
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{color}       
+\usepackage{indentfirst}      % retira padrao americano de paragrafos
+\usepackage{multicol}   
+\usepackage[linkbordercolor={1 1 1},urlcolor=black,colorlinks=true]{hyperref} % links
+\usepackage{subfig}
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,lmargin=3cm,rmargin=3cm}
+
+% circuito eletrico
+\usepackage{electComp}
+\usetikzlibrary{decorations,decorations.pathmorphing,decorations.pathreplacing}
+\usepackage{verbatim}
+\usepackage{pstricks}
+\usepackage{boxdims}
+
+
+\date{Agosto 20, 2010}
+% Capa estilizada %
+\newcommand*{\titleTMB}{\begingroup \centering \settowidth{\unitlength}{\LARGE EE531} {\large\scshape EE531 - Turma S}\\[0.2\baselineskip] \rule{11.0cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} \rule{11.0cm}{0.4pt}\\[\baselineskip] {\LARGE  Familizarização com instrumentos de medida}\\\vspace*{\baselineskip}  {\itshape Laboratório de Eletrônica Básica I - Segundo Semestre de 2010}\\ \rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} \rule{11.0cm}{1.6pt}\\[\baselineskip] {\large\scshape Professor: José Cândido Silveira Santos Filho}\par \vfill {\normalsize   \scshape 
+    \begin{center} 
+      \begin{tabular}{  l  l  p{5cm} } 
+        Raquel Mayumi Kawamoto & RA: 086003\\
+        Tiago Chedraoui Silva  & RA: 082941\\
+      \end{tabular} \end{center}
+    \itshape 20 de agosto de 2010    }\\[\baselineskip] \vspace{3.2pt} \endgroup}
+
+
+\begin{document}
+\titleTMB 
+\newpage
+
+\vspace{3mm}
+\begin{figure}[h]
+\centerline{\input circ1.tex}
+\caption{Circ1 \label{tab:circ}}
+\end{figure}
+
+\vspace{3mm}
+\begin{figure}[h]
+\centerline{\input circ2.tex}
+\caption{Circ2 \label{tab:circ}}
+\end{figure}
+
+\vspace{3mm}
+\begin{figure}[h]
+\centerline{\input circ3.tex}
+\caption{Circ3 \label{tab:circ}}
+\end{figure}
+
+\vspace{3mm}
+\begin{figure}[h]
+\centerline{\input circ4.tex}
+\caption{Circ4 \label{tab:circ}}
+\end{figure}
+
+
+
+\end{document}
