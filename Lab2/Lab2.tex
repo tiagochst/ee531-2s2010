@@ -36,7 +36,9 @@
 \usepackage{boxdims}
 
 \setcounter{tocdepth}{0}
-\renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
 \date{Setembro 10, 2010}
 % Capa estilizada %
 \newcommand*{\titleTMB}{\begingroup \centering \settowidth{\unitlength}{\LARGE EE531} {\large\scshape EE531 - Turma S}\\[0.2\baselineskip] \rule{11.0cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} \rule{11.0cm}{0.4pt}\\[\baselineskip] {\LARGE  Diodos}\\\vspace*{\baselineskip}  {\itshape Laboratório de Eletrônica Básica I - Segundo Semestre de 2010}\\ \rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} \rule{11.0cm}{1.6pt}\\[\baselineskip] {\large\scshape Professor: José Cândido Silveira Santos Filho}\par \vfill {\normalsize   \scshape 
@@ -113,6 +115,7 @@ Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracter�
 \par\end{centering}
 \end{figure}
 
+\renewcommand{\thefigure}{\thesubsection.\arabic{figure}}
 
 \newpage
 \section{Circuitos retificadores}
@@ -129,17 +132,17 @@ de meia onda e retificador de onda completa tipo ponte.
          Como o diodo do circuito da figura 2.1.1 não é ideal, pode-se escrever:
      
 \begin{equation}
-v_0=0,  v_s<V_{DO}
+v_0=0,       v_s<V_{DO}
 \end{equation}
 \begin{equation}
-v_0=\frac{R}{R+r_D}v_s -V_{DO}\frac{R}{R+r_D},  v_s>=V_{DO}
+v_0=\frac{R}{R+r_D}v_s -V_{DO}\frac{R}{R+r_D},      v_s \geq V_{DO}
 \end{equation}
 
 
     Em que   $V_{DO}$     e $r_D$ são, respectivamente, a tensão e a resistência do diodo.
-         Em muitas aplicações tem-se  $r_D << R$           e a segunda equação pode ser simplificada para:
+         Em muitas aplicações tem-se  $r_D \ll R$           e a segunda equação pode ser simplificada para:
 \begin{equation}
-v_0=v_s-V_{DO}
+v_0 \cong v_s-V_{DO}
 \end{equation}
 
 
@@ -218,6 +221,9 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 \end{figure}
 
 \newpage
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
 \section{Duplicador de Tensão}
  \setcounter{figure}{0}
 \vspace{3mm}
