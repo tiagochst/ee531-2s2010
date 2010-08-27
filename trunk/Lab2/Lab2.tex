@@ -103,14 +103,18 @@ V_D=-V_{CH1}\\
 \end{equation}
 
 
-Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracterísica (V versus I) do diodo presente na figura \ref{fig:q1-curva2}. As escala do eixo $V_D$ vale $500mV$/célula. Portanto, o diodo em condução direta apresenta um queda de tensão de aproximadamente $0,7V$.    
+Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracterísica (V versus I) do diodo presente na figura \ref{fig:q1-curva2}. As escala do eixo $V_D$ vale $500mV$/divisão e do eixo $I_D$ vale $2,18mA$. Portanto, o diodo em condução direta apresenta um queda de tensão de aproximadamente $0,7V$ e a corrente que passa pelo $D_2$ é a mesma que passa por $D_1$.    
 \begin{figure}[h]
 \begin{centering}
-\includegraphics[scale=0.6]{Imagens/3.1/NewFile0} \caption{Curva característica V versus I do diodo  \label{fig:q1-curva2}}
+\includegraphics[scale=0.5]{Imagens/3.1/NewFile0} \caption{Curva característica V versus I do diodo  \label{fig:q1-curva2}}
 \par\end{centering}
 \end{figure}
 
-Posteriormente trocou-se o diodo, inserindo o 4001.Variou-se a frequência di gerado. Histerese
+
+Como outra caracterísca dos diodos, existe o \textit{tempo de recuperação inverso $t_{rr}$} que é o o tempo decorrido para o diodo deixar de conduzir, após a mudança de polarização de direta para inversa.Ou seja, apesar do sinal de entrada passar do mínimo para o máximo e vice-versa, há um certo atraso para que essa transição ocorra causado pela característica do sistema de conservar suas propriedades. Para um diodo ideal esse tempo de atraso seria nulo.
+
+Para analizar esse tempo, trocou-se no circuito o diodo 1N4148 --- diodo de pequenos sinais cujo tempo de recupeção inverso está na faixa dos nanosegundos ---  pelo 4001, que possui um tempo de recuração inverso na faixa nos microsegundos. Devido a esse atraso, a curva de histerese pode ser vista, pois quando o sinal está no máximo, devido às características de conservação,a queda de tensão gera a parte superior da curva da figura \ref{fig:q1-his} já que mantém por mais tempo um valor mais alto de sinal e, quando está no valor mínimo, a transição gera a parte inferior da curva de histerese, no valor mais baixo mantém ele por mais tempo.Variando a frequência do circuito, quanto menor a frequência maior é a área da curva, quanto maior a frequência sua área diminui.
+
 
 \begin{figure}[h]
 \begin{centering}
@@ -210,7 +214,7 @@ PIV=V_S-2V_D+V_D=V_S-V_D
 no ponto do nó 1. (c) Forma de onda no ponto do nó 2. (d) Forma de onda no ponto do nó 3. \label{fig:ret-circ2}}
 \end{figure}
 
-
+\newpage
     Com o objetivo de montar uma fonte de tensão DC não regulada, introduziu-se o capacitor eletrolítico de  $100\mu$F entre os nós 3 e 0 da Figura \label{fig:ret-circ2}, ou seja, o capacitor é incluído em paralelo com o resistor de carga. Dessa forma, obteve-se um circuito retificador com capacitor de filtro (o retificador de pico).
          O circuito retificador de pico opera da seguinte maneira: inicialmente, o capacitor está descarregado; durante o primeiro semiciclo da tensao do secundário, o diodo está conduzindo permitindo que o secundário carregue o capacitor até a tensão de pico; logo após, no semiciclo negativo, o diodo pára de conduzir (o que significa uma chave aberta) e neste estágio, como o capacitor tem uma tensão $V_p$, ele polariza o diodo inversamente e começa a descarregar-se no resistor de carga. Deve ser considerado a constante de tempo de descarga do capaciotr, que é função do resistor $R$ e do capacitor $C$. Esta constante deve ser bem maior do que o período $T$ do sinal de entrada. Dessa forma, o capacitor só se descarregará um pouco até o próximo ciclo.
 
