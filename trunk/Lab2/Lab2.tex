@@ -69,10 +69,12 @@ de $10k\Omega$, um resistor de $1k\Omega$ e um tranformador de 110 $V_{ac}$,9 $V
 %\item
 \section{Amplificador Operacional}
  \setcounter{figure}{0}
+Um amplificador operacional é um amplificador com ganho  muito elevado. Tem dois terminais de entrada: um terminal designado por terminal inversor(-) e o outro identificado por terminal não inversor(+).
+Um amplificador operacional ideal possui algumas características como ter um ganho infinito em malha aberta, impedância de entrada infinita e impedância de saída nula. 
 
- Para esta parte inicial do experimento, o gerador de funções é ajustado para produzir um sinal de tensão com sua forma de onda triangular, com amplitude 10$V_{pp}$, com offset de $5V$, frequência de $10kHz$ e simetria de 50\%. 
+ Para esta parte inicial do experimento, o circuito da figura \ref{circ:1} --- composto de um amplificador operacional 741, um resistor (R$_i$) de $1k\Omega$, e dois diodos 1n4148 (D$_1$ e D$_2$) --- é montado e o canal um do osciloscópio é colocado entre D$_1$ e R$_i$ e o canal dois na saída do amplificador operacional. 
 
-Além disso, o circuito da figura \ref{circ:1} --- composto de um amplificador operacional 741, um resistor (R$_i$) de $1k\Omega$, e dois diodos 1n4148 (D$_1$ e D$_2$) --- é montado e o canal um do osciloscópio é colocado entre D$_1$ e R$_i$ e o canal dois na saída do amplificador operacional. 
+Além disso, o gerador de funções é ajustado para produzir um sinal de tensão com sua forma de onda triangular, com amplitude 10$V_{pp}$, com offset de $5V$, frequência de $10kHz$ e simetria de 50\%. 
 
  É importante que a onda gerada seja positiva, pois caso fosse negativa diodo $D_1$ atuaria bloquearia o sinal, logo o amplificador operacional saturaria.
 
@@ -97,13 +99,6 @@ Utilizando o canal 1, tem-se que:
 V_D=-V_{CH1}\\
 \end{equation}
 
-
-%\begin{figure}[h!]
-%\begin{centering}
-%\includegraphics[scale=0.7]{Imagens/3.1/q1} \caption{Curva característica V versus I do diodo \label{fig:q1-curva}}
-%\par\end{centering}
-%\end{figure}
-
 \newpage
 Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracterísica (V versus I) do diodo presente na figura \ref{fig:q1-curva2}. As escala do eixo $V_D$ vale $500mV$/célula. Portanto, o diodo em condução direta apresenta um queda de tensão de aproximadamente $0,7V$.    
 \begin{figure}[h]
@@ -111,7 +106,6 @@ Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracter�
 \includegraphics[scale=0.7]{Imagens/3.1/NewFile0} \caption{Curva característica V versus I do diodo  \label{fig:q1-curva2}}
 \par\end{centering}
 \end{figure}
-
 
 \begin{figure}[h]
 \begin{centering}
@@ -219,7 +213,7 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.5]{Imagens/3.3.4capacitor_paralelo/3cap} \caption{Forma de onda da tensão no capacitor do retificador de pico. \label{fig:cap-ret}}
+\includegraphics[scale=0.7]{Imagens/3.3.4capacitor_paralelo/3cap} \caption{Forma de onda da tensão no capacitor do retificador de pico. \label{fig:cap-ret}}
 \par\end{centering}
 \end{figure}
 
