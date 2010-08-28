@@ -232,6 +232,13 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
 
 \section{Duplicador de Tensão}
+
+No circuito denominado Duplicador de Tensão o diodo $D_1$ conduz quando a tensão de entrada é positiva, carregando o capacitor $C_1$. Esse capacitor terá uma tensão igual a $V_p$ ao carregar-se. Quando a tensão de entrada é negativa, o diodo $D_2$ conduz carregando o capacitor $C_2$ com a mesma polarização de $C_1$, também com tensão $V_p$. Em regime permanente, a queda de tensão nos capacitores será muito pequena comparada às amplitudes dos sinais, resultando em uma saída entre nós 1 e 2 de aproximadamente $2V_p$, podendo chamar o circuito de Duplicador de Tensão.
+
+A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras \ref{fig:dob-in} e \ref{fig:dob-in2}. A tensão de saída, entre os nós 1 e 2 é, como esperávamos, uma tensão contínua, aproximadamente igual a duas vezes a tensão de pico da onda quadrada de entrada. Isso é evidenciado na figura \ref{fig:dob-no12}, onde é possível observar claramente uma diferença de potencial de aproximadamente $2V_p$ entre os nós 1 e 2. A discrepância entre a tensão contínua de saída e $2V_p$ é devido a um pequeno descarregamento dos capacitores, o que fica menos significativo quando aumenta-se a frequência da onda de entrada.
+
+
+
  \setcounter{figure}{0}
 \vspace{3mm}
 \begin{figure}[h]
@@ -239,6 +246,8 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 \caption{Duplicador de tensão \label{tab:circ}}
 \end{figure}
 
+
+\begin{comment}
 
 \newpage
 \begin{figure}[h!]
@@ -258,7 +267,7 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.3.1onda_completa/no1} \caption{Medida da tensão no nó 1 \label{fig:q2-no1}}
+\includegraphics[scale=0.5]{Imagens/3.3.1onda_completa/no1} \caption{Medida da tensão no nó 1 \label{fig:q2-no1}}
 \par\end{centering}
 \end{figure}
 
@@ -266,17 +275,14 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.3.1onda_completa/no12} \caption{Medida da tensão nos nós 1 e 2 \label{fig:Fig-45}}
+\includegraphics[scale=0.5]{Imagens/3.3.1onda_completa/no12} \caption{Medida da tensão nos nós 1 e 2 \label{fig:Fig-45}}
 \par\end{centering}
-\end{figure}
-
-
+%\end{figure}
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.3.1onda_completa/p1q3} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
+\includegraphics[scale=0.5]{Imagens/3.3.1onda_completa/p1q3} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
 \par\end{centering}
 \end{figure}
-
 
 
 \newpage
@@ -286,36 +292,46 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 \includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/423} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
 \par\end{centering}
 \end{figure}
+\end{comment}
 
 
 \newpage
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/423} \caption{Tensão de saída nos nós 1 e 2 \label{fig:q4-no12}}
+\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/423} \caption{Tensão de saída nos nós 1 e 2 \label{fig:dob-no12}}
 \par\end{centering}
 \end{figure}
 
+\begin{comment}
 
 \begin{figure}[h!]
 \begin{centering}
 \includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/444} \caption{Análise do sinal de saída no nó x \label{fig:q4-no}}
 \par\end{centering}
 \end{figure}
+\end{comment}
 
 
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/Vin} \caption{Onda de entrada do circuito\label{fig:q4-vin}}
 \par\end{centering}
 \end{figure}
-
 
 
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/Vinmedidas} \caption{Medidas da onda de entrada do circuito \label{fig:q4-vindata}}
+\subfloat[]{
+\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/Vin}\label{fig:dob-in}
+}
+\subfloat[]{
+\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/Vinmedidas}\label{fig:dob-in2}
+}
 \par\end{centering}
+\caption{(a) Medidas da onda de entrada do circuito. (b) Onda de entrada do circuito. \label{fig:ret-circ1}}
 \end{figure}
+
+
+\begin{comment}
 
 
 \newpage
@@ -326,6 +342,6 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 \end{figure}
 
 
-
+\end{comment}
 
 \end{document}
