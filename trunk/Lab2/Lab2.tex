@@ -127,16 +127,14 @@ Para analizar esse tempo, trocou-se no circuito o diodo 1N4148 --- diodo de pequ
 \newpage
 \section{Circuitos retificadores}
  \setcounter{figure}{0}
-O circuito retificador é uma aplicação fundamental do diodo, que faz uso intenso da curva não-linear i-v. Este circuito consiste em um diodo D e um resistor R conectados em série.Supondo uma tensão de entrada senoidal  $v_1$ e um diodo ideal, durante os semicilos positivosda entrada senoidal, a tensão positiva  $v_1$     faz com que a corrente circule pelo diodo no sentido
-direto. Como a tensão no diodo será muito pequena, idealmente zero, a tensão de saída  $v_0$ será igual a tensão de entrada      $v_1$     . Durante os semiciclos negativos de    $v_1$    , o diodo não conduzirá. Portanto,   $v_0$     será zero. A figura 2.1 ilustra os circuitos em cada semiciclo de   $v_1$  e as formas de ondas de saída  $v_0$      .
-        Observa-se que, enquanto  $v_1$        alterna em polaridade e tem um valor médio zero,     $v_0$   é unidirecional e tem um valor médio finito, ou uma componente cc. Portanto, o circuito retificador retifica o sinal, sendo por isso denominado de retificador. Ele pode ser usado para gerar cc a partir de ca.
-         Para este experimento foram estudados dois tipos de circuitos retificadores: retificador
-de meia onda e retificador de onda completa tipo ponte.
+O circuito retificador é uma aplicação fundamental do diodo, que faz uso intenso da curva não-linear i-v. Este circuito consiste em um diodo $D$ e um resistor $R$ conectados em série. Supondo uma tensão de entrada senoidal  $v_1$ e um diodo ideal, durante os semicilos positivos da entrada senoidal, a tensão positiva  $v_1$ faz com que a corrente circule pelo diodo no sentido direto. Como a tensão no diodo será muito pequena, idealmente zero, a tensão de saída  $v_0$ será igual a tensão de entrada      $v_1$     . Durante os semiciclos negativos de    $v_1$    , o diodo não conduzirá. Portanto,   $v_0$     será zero. A figura 2.1 ilustra os circuitos em cada semiciclo de   $v_1$  e as formas de ondas de saída  $v_0$      .
+        Observa-se que, enquanto $v_1$ alterna em polaridade e tem um valor médio zero, $v_0$ é unidirecional e tem um valor médio finito, ou uma componente cc. Portanto, o circuito retificador retifica o sinal, sendo por isso denominado de retificador. Ele pode ser usado para gerar cc a partir de ca.
+         Para este experimento foram estudados dois tipos de circuitos retificadores: retificador de meia onda e retificador de onda completa tipo ponte.
       
 \subsection{Retificador de meia onda}
-         Inicialmente foi montado no protoboard o circuito da figura 2.1.1 circuito retificador de meia onda que consiste em um diodo de retificação (diodo 1N4001) e um resistor (de valor $10k\Omega$) conectados em série, alimentados por um transformador de $110V_{ac}$.
-         Um circuito retificador de meia onda utiliza metade dos semiciclos da senóide de entrada. Supondo um diodo ideal, durante os semiciclos positivos da entrada senoidal, a tensão positiva $V_s$ faz com que a corrente circule pelo diodo no sentido direto. Segue que a tensão no diodo será muito pequena idealmente zero. Portanto, a tensão de saída $V_0$ será igual à tensão de entrada $V_s$ . Por outro lado, durante os semiciclos negativos de $V_s$, o diodo não conduzirá, sendo a tensão de saída igual a zero. Enquanto $V_s$ alterna em polaridade e tem um valor médio zero, a tensão de saída é unidirecional e tem um valor médio finito, ou uma componente cc.
-         Como o diodo do circuito da figura 2.1.1 não é ideal, pode-se escrever:
+         Inicialmente foi montado no protoboard o circuito da figura \ref{fig:ret-circ1} circuito retificador de meia onda que consiste em um diodo de retificação (diodo 1N4001) e um resistor (de valor $10k\Omega$) conectados em série, alimentados por um transformador de $110V_{ac}$.
+         Um circuito retificador de meia onda utiliza metade dos semiciclos da senóide de entrada. Supondo um diodo ideal, durante os semiciclos positivos da entrada senoidal, a tensão positiva $V_s$ faz com que a corrente circule pelo diodo no sentido direto. Segue que a tensão no diodo será muito pequena idealmente zero. Portanto, a tensão de saída $V_0$ será igual à tensão de entrada $V_s$. Por outro lado, durante os semiciclos negativos de $V_s$, o diodo não conduzirá, sendo a tensão de saída igual a zero. Enquanto $V_s$ alterna em polaridade e tem um valor médio zero, a tensão de saída é unidirecional e tem um valor médio finito, ou uma componente cc.
+         Como o diodo do circuito da figura \ref{fig:ret-circ1} não é ideal, pode-se escrever:
      
 \begin{equation}
   v_0=0,       v_s<V_{DO}
@@ -155,7 +153,7 @@ v_0 \cong v_s-V_{DO}
 
          Um dos principais parâmetros de um diodo no projeto de retificadores é a tensão de pico inversa (\textit{peak inverse voltage} – PIV) que o diodo deve ser capaz de suportar sem atingir a
 tensão de ruptura, determinada pelo maior valor de tensão inversa que pode aparecer no diodo. Pelo circuito da figura  \ref{fig:ret-circ1} observa-se que, quando $v_s$ é negativo, o diodo corta e   $v_0$      é
-igual a zero. Portanto, conclui-se que a PIV é igual ao valor de pico $v_s:PIV=V_s$ .
+igual a zero. Portanto, conclui-se que a PIV é igual ao valor de pico $v_s:PIV=V_s$.
 
 \begin{figure}[h!]
 \begin{centering}
@@ -174,25 +172,23 @@ igual a zero. Portanto, conclui-se que a PIV é igual ao valor de pico $v_s:PIV=
 \end{figure}
 
 \newpage
-          Fazendo-se a análise do esquemático da figura  \ref{fig:ret-circ1(a)}, pode-se ver o funcionamento de um retificador de meia onda a partir das formas de ondas capturadas no osciloscópio dos nós 1 e 2 do circuito da figura  \ref{fig:ret-circ1(b)}. Os nós 1 e 2 correspondem, respectivamente, ao canal 1(CH1) e ao canal 2 (CH2) do osciloscópio. Nos semiciclos positivos, como o diodo encontra-se em curto, irá passar corrente pelo circuito, criando uma tensão de saída no resistor. Os diodos introduzem perdas na tensão final de modo que a tensão de saída tende a $v_0=v_s-V_{DO}$.Pode-se verificar pela figura  \ref{fig:ret-circ1(b)} que a máxima tensão de saída do circuito é de   $13.4 Volts$. Portanto,    $V_{DO}= 0.8V $ . Nos semiciclos negativos, o diodo não conduz, portanto a tensão de saída é zero.
+          Fazendo-se a análise do esquemático da figura  \ref{fig:ret-circ1(a)}, pode-se ver o funcionamento de um retificador de meia onda a partir das formas de ondas capturadas no osciloscópio dos nós 1 e 2 do circuito da figura  \ref{fig:ret-circ1(b)}. Os nós 1 e 2 correspondem, respectivamente, ao canal 1(CH1) e ao canal 2 (CH2) do osciloscópio. Nos semiciclos positivos, como o diodo encontra-se em curto, irá passar corrente pelo circuito, criando uma tensão de saída no resistor. Os diodos introduzem perdas na tensão final de modo que a tensão de saída tende a $v_0=v_s-V_{DO}$. Pode-se verificar pela figura  \ref{fig:ret-circ1(b)} que a máxima tensão de saída do circuito é de   $13.4 Volts$. Portanto,    $V_{DO}= 0.8V $. Nos semiciclos negativos, o diodo não conduz, portanto a tensão de saída é zero.
     
 
 
  \subsection{ Retificador de Onda Completa tipo Ponte}
-         Foi montado no protoboard o circuito da figura 2.2.1 circuito retificador de onda completa tipo ponte que consiste em quatro diodos de retificação $D$ (diodo 1N4001) e um resistor $R$    (de valor $10k\Omega$) dispostos conforme indica a figura 2.2.1, alimentados por um transformador de $110V_{ac}$.
+         Foi montado no protoboard o circuito da figura \ref{fig:ret-circ2} circuito retificador de onda completa tipo ponte que consiste em quatro diodos de retificação $D$ (diodo 1N4001) e um resistor $R$    (de valor $10k\Omega$) dispostos conforme indica a figura \ref{fig:ret-circ2}, alimentados por um transformador de $110V_{ac}$.
          O circuito retificador em ponte opera da seguinte maneira: durante os semiciclos positivos da tensão de entrada $v_s$, é positiva e a corrente é conduzida pelo diodo $D_1$, resistor $R$ e diodo $D_2$. Enquanto isso, os diodos  $D_3$      e $D_4$   estarão inversamente polarizados. Durante os semiciclos negativos da tensão de entrada, a tensão $v_s$ no secundário será negativa e, portanto,  $-v_s$     será positiva, forçando a corrente a circular por $D_3$ , $R$ e $D_4$ . Enquanto isso, os diodos $D_1$ e $D_2$   estarão inversamente polarizados.
          Deve ser observado que durante ambos os semiciclos, a corrente circula por $R$ no mesmo sentido (do ponto 3 para o ponto 0) e então   $v_o$    será sempre positiva.
-         Para determinar a tensão de pico inversa (PIV) de cada diodo, considera-se o circuito durante os semiciclos positivos. A tensão inversa sobre o diodo $D_3$ pode ser estabelecida pela malha formada por $D_3$, R e $D_2$         como  $v_{D3}(inverso)v_o+v_{D2}(direto)$ . Logo, o valor máximo de $v_{D3}$     ocorre no pico de $v_o$    e é dado por:
+         Para determinar a tensão de pico inversa (PIV) de cada diodo, considera-se o circuito durante os semiciclos positivos. A tensão inversa sobre o diodo $D_3$ pode ser estabelecida pela malha formada por $D_3$, R e $D_2$         como  $v_{D3}(inverso)v_o+v_{D2}(direto)$. Logo, o valor máximo de $v_{D3}$     ocorre no pico de $v_o$    e é dado por:
                                     
 \begin{equation}
 PIV=V_S-2V_D+V_D=V_S-V_D
 \end{equation}
 
-%\newpage
 \begin{figure}[h!]
 \begin{centering}
 \subfloat[]{
-%\includegraphics[scale=0.45]{Imagens/mag_h.eps}
 \input circ3.tex
  \label{fig:ret-circ2(a)}
 }
@@ -215,11 +211,10 @@ no ponto do nó 1. (c) Forma de onda no ponto do nó 2. (d) Forma de onda no pon
 \end{figure}
 
 \newpage
-    Com o objetivo de montar uma fonte de tensão DC não regulada, introduziu-se o capacitor eletrolítico de  $100\mu$F entre os nós 3 e 0 da Figura \label{fig:ret-circ2}, ou seja, o capacitor é incluído em paralelo com o resistor de carga. Dessa forma, obteve-se um circuito retificador com capacitor de filtro (o retificador de pico).
+    Com o objetivo de montar uma fonte de tensão DC não regulada, introduziu-se o capacitor eletrolítico de  $100\mu$F entre os nós 3 e 0 da Figura \ref{fig:ret-circ2}, ou seja, o capacitor é incluído em paralelo com o resistor de carga. Dessa forma, obteve-se um circuito retificador com capacitor de filtro (o retificador de pico).
          O circuito retificador de pico opera da seguinte maneira: inicialmente, o capacitor está descarregado; durante o primeiro semiciclo da tensao do secundário, o diodo está conduzindo permitindo que o secundário carregue o capacitor até a tensão de pico; logo após, no semiciclo negativo, o diodo pára de conduzir (o que significa uma chave aberta) e neste estágio, como o capacitor tem uma tensão $V_p$, ele polariza o diodo inversamente e começa a descarregar-se no resistor de carga. Deve ser considerado a constante de tempo de descarga do capaciotr, que é função do resistor $R$ e do capacitor $C$. Esta constante deve ser bem maior do que o período $T$ do sinal de entrada. Dessa forma, o capacitor só se descarregará um pouco até o próximo ciclo.
 
 A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
-  %  Figura 2.2.2 
 
 \begin{figure}[h!]
 \begin{centering}
@@ -233,7 +228,7 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 
 \section{Duplicador de Tensão}
 
-No circuito denominado Duplicador de Tensão o diodo $D_1$ conduz quando a tensão de entrada é positiva, carregando o capacitor $C_1$. Esse capacitor terá uma tensão igual a $V_p$ ao carregar-se. Quando a tensão de entrada é negativa, o diodo $D_2$ conduz carregando o capacitor $C_2$ com a mesma polarização de $C_1$, também com tensão $V_p$. Em regime permanente, a queda de tensão nos capacitores será muito pequena comparada às amplitudes dos sinais, resultando em uma saída entre nós 1 e 2 de aproximadamente $2V_p$, podendo chamar o circuito de Duplicador de Tensão.
+No circuito denominado Duplicador de Tensão o diodo $D_1$ conduz quando a tensão de entrada é positiva, carregando o capacitor $C_1$. Esse capacitor terá uma tensão igual a $V_p$ ao carregar-se. Quando a tensão de entrada é negativa, o diodo $D_2$ conduz, carregando o capacitor $C_2$ com a mesma polarização de $C_1$, também com tensão $V_p$. Em regime permanente, a queda de tensão nos capacitores será muito pequena comparada às amplitudes dos sinais, resultando em uma saída entre nós 1 e 2 de aproximadamente $2V_p$, podendo chamar o circuito de Duplicador de Tensão.
 
 A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras \ref{fig:dob-in} e \ref{fig:dob-in2}. A tensão de saída, entre os nós 1 e 2 é, como esperávamos, uma tensão contínua, aproximadamente igual a duas vezes a tensão de pico da onda quadrada de entrada. Isso é evidenciado na figura \ref{fig:dob-no12}, onde é possível observar claramente uma diferença de potencial de aproximadamente $2V_p$ entre os nós 1 e 2. A discrepância entre a tensão contínua de saída e $2V_p$ é devido a um pequeno descarregamento dos capacitores, o que fica menos significativo quando aumenta-se a frequência da onda de entrada.
 
@@ -246,70 +241,12 @@ A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras
 \caption{Duplicador de tensão \label{tab:circ}}
 \end{figure}
 
-
-\begin{comment}
-
-\newpage
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.3.1onda_completa/3} \caption{Medida da tensão no nó 3 \label{fig:q2-no3}}
-\par\end{centering}
-\end{figure}
-
-
-
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.3.1onda_completa/31} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
-\par\end{centering}
-\end{figure}
-
-
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.5]{Imagens/3.3.1onda_completa/no1} \caption{Medida da tensão no nó 1 \label{fig:q2-no1}}
-\par\end{centering}
-\end{figure}
-
-\newpage
-
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.5]{Imagens/3.3.1onda_completa/no12} \caption{Medida da tensão nos nós 1 e 2 \label{fig:Fig-45}}
-\par\end{centering}
-%\end{figure}
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.5]{Imagens/3.3.1onda_completa/p1q3} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
-\par\end{centering}
-\end{figure}
-
-
-\newpage
-
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/423} \caption{Medida da tensão diferencial entre os nós 2 e 3 \label{fig:Fig-45}}
-\par\end{centering}
-\end{figure}
-\end{comment}
-
-
 \newpage
 \begin{figure}[h!]
 \begin{centering}
 \includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/423} \caption{Tensão de saída nos nós 1 e 2 \label{fig:dob-no12}}
 \par\end{centering}
 \end{figure}
-
-\begin{comment}
-
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/444} \caption{Análise do sinal de saída no nó x \label{fig:q4-no}}
-\par\end{centering}
-\end{figure}
-\end{comment}
 
 
 \begin{figure}[h!]
@@ -327,19 +264,8 @@ A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras
 \includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/Vinmedidas}\label{fig:dob-in2}
 }
 \par\end{centering}
-\caption{(a) Onda de entrada do circuito. (b)  Medidas da onda de entrada do circuito. \label{fig:ret-circ1}}
+\caption{(a) Onda de entrada do circuito. (b)  Medidas da onda de entrada do circuito. \label{fig:dob}}
 \end{figure}
 
-
-\begin{comment}
-\newpage
-\begin{figure}[h!]
-\begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.3.4capacitor_paralelo/3cao1} \caption{Característica onda após a inserção de capacitor em paralelo \label{fig:Fig-45}}
-\par\end{centering}
-\end{figure}
-
-
-\end{comment}
 
 \end{document}
