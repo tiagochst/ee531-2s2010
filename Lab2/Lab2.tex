@@ -92,18 +92,21 @@ Supondo que o amplificador operacional seja ideal, nenhuma corrente de entrada �
 \frac{V_D}{A}=(v_2-v_1)\approx0
 \end{equation}
 
-Como $v_1=0$ temos que $v_2=0$, assim:.
+Como $v_1=0$ temos que $v_2=0$, assim:
 \begin{equation}
 i=\frac{V_{CH2}}{R_{i}}\\
 \end{equation}
 
+A partir dos dados obtemos $V_{CH2}=8,72V$, logo $I_D$ vale $8,72mA$.
+
 Utilizando o canal 1, tem-se que:  
+
 \begin{equation}
 V_D=-V_{CH1}\\
 \end{equation}
 
 
-Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracterísica (V versus I) do diodo presente na figura \ref{fig:q1-curva2}. As escala do eixo $V_D$ vale $500mV$/divisão e do eixo $I_D$ vale $2,18mA$. Portanto, o diodo em condução direta apresenta um queda de tensão de aproximadamente $0,7V$ e a corrente que passa pelo $D_2$ é a mesma que passa por $D_1$.    
+Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracterísica (V versus I) do diodo presente na figura \ref{fig:q1-curva2} cuja escala do eixo $V_D$ vale $500mV$/divisão. Portanto, pode-se observar através do gráfico que o diodo em condução direta apresenta um queda de tensão de aproximadamente $0,7V$ e, para tensões inferiores a $0,7V$, o diodo não conduz e para tensões superiores passa a conduzir corrente.    
 \begin{figure}[h]
 \begin{centering}
 \includegraphics[scale=0.5]{Imagens/3.1/NewFile0} \caption{Curva característica V versus I do diodo  \label{fig:q1-curva2}}
@@ -111,9 +114,9 @@ Utilizando o recurso Time Base X-Y do osciloscópio, obtemos uma curva caracter�
 \end{figure}
 
 
-Como outra caracterísca dos diodos, existe o \textit{tempo de recuperação inverso $t_{rr}$} que é o o tempo decorrido para o diodo deixar de conduzir, após a mudança de polarização de direta para inversa.Ou seja, apesar do sinal de entrada passar do mínimo para o máximo e vice-versa, há um certo atraso para que essa transição ocorra causado pela característica do sistema de conservar suas propriedades. Para um diodo ideal esse tempo de atraso seria nulo.
+Como outra caracterísca dos diodos, existe o \textit{tempo de recuperação inverso $t_{rr}$}, que é o o tempo decorrido para o diodo deixar de conduzir após a mudança de polarização de direta para inversa. Ou seja, apesar do sinal de entrada passar do mínimo para o máximo e vice-versa, há um certo atraso para que essa transição ocorra causado pela característica do sistema de conservar suas propriedades. Para um diodo ideal esse tempo de atraso seria nulo.
 
-Para analizar esse tempo, trocou-se no circuito o diodo 1N4148 --- diodo de pequenos sinais cujo tempo de recupeção inverso está na faixa dos nanosegundos ---  pelo 4001, que possui um tempo de recuração inverso na faixa nos microsegundos. Devido a esse atraso, a curva de histerese pode ser vista, pois quando o sinal está no máximo, devido às características de conservação,a queda de tensão gera a parte superior da curva da figura \ref{fig:q1-his} já que mantém por mais tempo um valor mais alto de sinal e, quando está no valor mínimo, a transição gera a parte inferior da curva de histerese, no valor mais baixo mantém ele por mais tempo.Variando a frequência do circuito, quanto menor a frequência maior é a área da curva, quanto maior a frequência sua área diminui.
+Para analizar esse tempo, trocou-se no circuito o diodo 1N4148 --- diodo de pequenos sinais cujo tempo de recupeção inverso está na faixa dos nanosegundos ---  pelo 4001, que possui um tempo de recuração inverso na faixa nos microsegundos. Devido a esse atraso, a curva de histerese pode ser vista, pois quando o sinal está no máximo, devido às características de conservação, a queda de tensão gera a parte superior da curva da figura \ref{fig:q1-his} ao manter por mais tempo um valor mais alto de sinal e, quando está no valor mínimo, a transição gera a parte inferior da curva de histerese, ao manter um valor mais baixo por mais tempo. Variando a frequência do circuito, quanto menor a frequência maior é a área da curva, quanto maior a frequência sua área diminui.
 
 
 \begin{figure}[h]
@@ -230,7 +233,13 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 
 No circuito denominado Duplicador de Tensão o diodo $D_1$ conduz quando a tensão de entrada é positiva, carregando o capacitor $C_1$. Esse capacitor terá uma tensão igual a $V_p$ ao carregar-se. Quando a tensão de entrada é negativa, o diodo $D_2$ conduz, carregando o capacitor $C_2$ com a mesma polarização de $C_1$, também com tensão $V_p$. Em regime permanente, a queda de tensão nos capacitores será muito pequena comparada às amplitudes dos sinais, resultando em uma saída entre nós 1 e 2 de aproximadamente $2V_p$, podendo chamar o circuito de Duplicador de Tensão.
 
-A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras \ref{fig:dob-in} e \ref{fig:dob-in2}. A tensão de saída, entre os nós 1 e 2 é, como esperávamos, uma tensão contínua, aproximadamente igual a duas vezes a tensão de pico da onda quadrada de entrada. Isso é evidenciado na figura \ref{fig:dob-no12}, onde é possível observar claramente uma diferença de potencial de aproximadamente $2V_p$ entre os nós 1 e 2. A discrepância entre a tensão contínua de saída e $2V_p$ é devido a um pequeno descarregamento dos capacitores, o que fica menos significativo quando aumenta-se a frequência da onda de entrada.
+A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras \ref{fig:dob}, medidas no canal 1.
+É uma onda quadrada de aproximadamente $10 V_{pp}$, frequência de $1kHz$ e duty cycle de aproximadamente
+50\% para a parte positiva e negativa do sinal. A ponta de prova do canal 2 foi colocada no nó 1 e a ponta do canal 1 foi colocada no nó 2, a fim de medir
+a diferença de potencial entre os dois nós, que é a tensão de saída do circuito. A
+mesma é, como esperávamos, uma tensão contínua, aproximadamente igual a
+duas vezes a tensão de pico da onda quadrada de entrada.
+Isso é evidenciado na figura \ref{fig:dob-no12}, onde é possível observar claramente uma diferença de potencial de aproximadamente $2V_p$ entre os nós 1 e 2. A discrepância entre a tensão contínua de saída e $2V_p$ é devido a um pequeno descarregamento dos capacitores, o que fica menos significativo quando aumenta-se a frequência da onda de entrada.
 
 
 
@@ -244,7 +253,7 @@ A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras
 \newpage
 \begin{figure}[h!]
 \begin{centering}
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/423} \caption{Tensão de saída nos nós 1 e 2 \label{fig:dob-no12}}
+\includegraphics[scale=0.55]{Imagens/3.4duplicador_tensao/423} \caption{Tensão de saída nos nós 1 e 2 \label{fig:dob-no12}}
 \par\end{centering}
 \end{figure}
 
@@ -257,14 +266,9 @@ A forma de onda na entrada, como foi pedido no item, está ilustrada nas Figuras
 
 \begin{figure}[h!]
 \begin{centering}
-\subfloat[]{
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/Vin}\label{fig:dob-in}
-}
-\subfloat[]{
-\includegraphics[scale=0.7]{Imagens/3.4duplicador_tensao/Vinmedidas}\label{fig:dob-in2}
-}
+\includegraphics[scale=0.55]{Imagens/3.4duplicador_tensao/Vinmedidas}
 \par\end{centering}
-\caption{(a) Onda de entrada do circuito. (b)  Medidas da onda de entrada do circuito. \label{fig:dob}}
+\caption{ Medidas da onda de entrada do circuito. \label{fig:dob}}
 \end{figure}
 
 
