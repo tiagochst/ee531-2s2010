@@ -158,25 +158,60 @@ v_0 \cong v_s-V_{DO}
 tensão de ruptura, determinada pelo maior valor de tensão inversa que pode aparecer no diodo. Pelo circuito da figura  \ref{fig:ret-circ1} observa-se que, quando $v_s$ é negativo, o diodo corta e   $v_0$      é
 igual a zero. Portanto, conclui-se que a PIV é igual ao valor de pico $v_s:PIV=V_s$.
 
+
+
+
 \begin{figure}[h!]
 \begin{centering}
 \subfloat[]{
 %\includegraphics[scale=0.45]{Imagens/mag_h.eps}
 \input circ2.tex
- \label{fig:ret-circ1(a)}
+ \label{fig:retmeia-circ1(a)}
 }
 
 \subfloat[]{
-\includegraphics[scale=0.7]{Imagens/3.3.1ret_meia_onda/311}
- \label{fig:ret-circ1(b)}
+\includegraphics[scale=0.45]{Imagens/3.3.1ret_meia_onda/311}
+ \label{fig:retmeia-circ1(b)}
+}
+\subfloat[]{
+\includegraphics[scale=0.45]{Imagens/3.3.1onda_completa/p1q3}
+\label{fig:retmeia-circ1(c)}
+}
+\subfloat[]{
+\includegraphics[scale=0.45]{Imagens/3.3.1onda_completa/p2q3}
+\label{fig:retmeia-circ1(d)}
 }
 \par\end{centering}
-\caption{(a) Circuito Retificador de Meia Onda. (b)  Formas de onda de entrada e saída. \label{fig:ret-circ1}}
+
+
+\caption{(a) Circuito Retificador de Meia Onda. (b)  Formas de onda de entrada e saída.(c) Forma de onda no nó 1 (d) Forma de onda no nó 2 \label{fig:ret-circ1}.}
+
 \end{figure}
 
 \newpage
-          Fazendo-se a análise do esquemático da figura  \ref{fig:ret-circ1(a)}, pode-se ver o funcionamento de um retificador de meia onda a partir das formas de ondas capturadas no osciloscópio dos nós 1 e 2 do circuito da figura  \ref{fig:ret-circ1(b)}. Os nós 1 e 2 correspondem, respectivamente, ao canal 1(CH1) e ao canal 2 (CH2) do osciloscópio. Nos semiciclos positivos, como o diodo encontra-se em curto, irá passar corrente pelo circuito, criando uma tensão de saída no resistor. Os diodos introduzem perdas na tensão final de modo que a tensão de saída tende a $v_0=v_s-V_{DO}$. Pode-se verificar pela figura  \ref{fig:ret-circ1(b)} que a máxima tensão de saída do circuito é de   $13.4 Volts$. Portanto,    $V_{DO}= 0.8V $. Nos semiciclos negativos, o diodo não conduz, portanto a tensão de saída é zero.
+          Fazendo-se a análise do esquemático da figura  \ref{fig:retmeia-circ1(a)}, pode-se ver o funcionamento de um retificador de meia onda a partir das formas de ondas capturadas no osciloscópio dos nós 1 e 2 do circuito da figura  \ref{fig:retmeia-circ1(b)}. Os nós 1 e 2 correspondem, respectivamente, ao canal 1(CH1) e ao canal 2 (CH2) do osciloscópio. Nos semiciclos positivos, como o diodo encontra-se em curto, irá passar corrente pelo circuito, criando uma tensão de saída no resistor. Os diodos introduzem perdas na tensão final de modo que a tensão de saída tende a $v_0=v_s-V_{DO}$. Pode-se verificar pela figura  \ref{fig:retmeia-circ1(b)} que a máxima tensão de saída do circuito é de   $13.4 Volts$. Portanto,    $V_{DO}= 0.8V $. Nos semiciclos negativos, o diodo não conduz, portanto a tensão de saída é zero.
+
+
+Analisando a figura \ref{fig:retmeia-circ1(b)},  \ref{fig:retmeia-circ1(c)}, \ref{fig:retmeia-circ1(d)} obtemos, os valores das ondas presentes na tabela \ref{tab:ret_mei_onda}. Teoricamente no nó 2 deveria obter-se $V_{min}=0V$ e $v_0=13,4V$, ambos os valores condizem com os valores encontrados.
+
     
+\begin{table}[h!]
+\begin{centering}
+\begin{tabular}{|c|c|c|c|}
+\cline{2-4} 
+\multicolumn{1}{c|}{} & $V_{min}$ & $V_{max}$ & $V_{avg}$\tabularnewline
+\hline 
+Nó 1 & $-13,6V$ & $14,2V$ & $114mV$\tabularnewline
+\hline 
+Nó 2 & $0V$ & $13,4V$ & $3,66V$\tabularnewline
+\hline
+\end{tabular}
+\par\end{centering}
+
+\caption{Valores de máximo, mínimo e média das ondas nos nós 1 e 2.}
+\label{tab:ret_mei_onda}
+\end{table}
+
 
 
  \subsection{ Retificador de Onda Completa tipo Ponte}
@@ -189,6 +224,30 @@ igual a zero. Portanto, conclui-se que a PIV é igual ao valor de pico $v_s:PIV=
 PIV=V_S-2V_D+V_D=V_S-V_D
 \end{equation}
 
+Analisando as figuras \ref{fig:ret-circ2(b)}, \ref{fig:ret-circ2(c)}, \ref{fig:ret-circ2(d)} obtemos, os valores das ondas presentes na tabela \ref{tab:ret_tot_onda}. Teoricamente no nó 1,2 e 3 deveria obter-se $V_{min}=0V$, porém, no nó 3 deveria-se obter  $v_{max}=12,0V$, um diferença de 7,7\% com o teórico.
+
+
+\begin{table}[h!]
+\begin{centering}
+\begin{tabular}{|c|c|c|c|}
+\cline{2-4} 
+\multicolumn{1}{c|}{} & $V_{min}$ & $V_{max}$ & $V_{avg}$\tabularnewline
+\hline 
+Nó 1 & $-400mV$ & $13,6$ & $3,96V$ \tabularnewline
+\hline 
+Nó 2 & $-400mV$ & $13,6V$ & $3,98V$\tabularnewline
+\hline 
+Nó 3 & $-200mV$ & $13,0V$ & $8,25V$\tabularnewline
+\hline
+\end{tabular}
+\par\end{centering}
+
+\caption{Valores de máximo, mínimo e média das ondas nos nós 1,2 e 3 referentes ao circuito  \ref{fig:ret-circ2(a)}.}
+
+\label{tab:ret_tot_onda}
+\end{table}
+
+
 \begin{figure}[h!]
 \begin{centering}
 \subfloat[]{
@@ -197,7 +256,7 @@ PIV=V_S-2V_D+V_D=V_S-V_D
 }
 \par\end{centering}
 \subfloat[]{
-\includegraphics[scale=0.45]{Imagens/3.3.1onda_completa/p2q3}
+\includegraphics[scale=0.45]{Imagens/3.3.1onda_completa/no1}
  \label{fig:ret-circ2(b)}
 }
 \subfloat[]{
@@ -213,6 +272,11 @@ PIV=V_S-2V_D+V_D=V_S-V_D
 no ponto do nó 1. (c) Forma de onda no ponto do nó 2. (d) Forma de onda no ponto do nó 3. \label{fig:ret-circ2}}
 \end{figure}
 
+
+
+
+Posteriormente, realizando uma análise dos circuitos  \ref{fig:ret-circ2(a)} e \ref{fig:retmeia-circ1(a)}, tem-se que o PIV do retificador meia onda vale $14,2V$ e o da onda completa $12,8V$. O retificador de completa tem PIV menor, sendo devido a diferença do diodo.
+
 \newpage
     Com o objetivo de montar uma fonte de tensão DC não regulada, introduziu-se o capacitor eletrolítico de  $100\mu$F entre os nós 3 e 0 da Figura \ref{fig:ret-circ2}, ou seja, o capacitor é incluído em paralelo com o resistor de carga. Dessa forma, obteve-se um circuito retificador com capacitor de filtro (o retificador de pico).
          O circuito retificador de pico opera da seguinte maneira: inicialmente, o capacitor está descarregado; durante o primeiro semiciclo da tensao do secundário, o diodo está conduzindo permitindo que o secundário carregue o capacitor até a tensão de pico; logo após, no semiciclo negativo, o diodo pára de conduzir (o que significa uma chave aberta) e neste estágio, como o capacitor tem uma tensão $V_p$, ele polariza o diodo inversamente e começa a descarregar-se no resistor de carga. Deve ser considerado a constante de tempo de descarga do capaciotr, que é função do resistor $R$ e do capacitor $C$. Esta constante deve ser bem maior do que o período $T$ do sinal de entrada. Dessa forma, o capacitor só se descarregará um pouco até o próximo ciclo.
@@ -226,6 +290,14 @@ A figura \ref{fig:cap-ret} ilustra a forma de onda do retificador de pico.
 \end{figure}
 
 \newpage
+
+De acordo com a figura \ref{fig:cap-ret} $V_r$ vale $104mV$. Para uma comparação teórica, temos através da equação (8) que $V_r$ depende de $V_p$ ($12,3V$) e inversamente do capacitor ($100\mu$F), resistor ($10k\Omega$), frequência ($119Hz$).Logo, $V_r$ teórico vale $103mV$.  
+
+\begin{equation}
+V_r = \frac{V_p} {fCR}
+\end{equation}
+
+Portanto, o valor obtido difere em 1\% do valor teórico.
 
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
 
