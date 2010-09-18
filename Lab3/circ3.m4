@@ -24,7 +24,7 @@ ground;
 up_;
 {variable(`resistor',uN) }
 line right_ 0.65*dim ;
-resistor(up_); llabel(,R_E,); line to Q1.E
+resistor(up_); rlabel(,R_E,); line to Q1.E
 #line to (Q1.B,Here);ground;
 #line to Q1.E; 
 #resistor(up_); llabel(,R_2,); line to Q1.B
