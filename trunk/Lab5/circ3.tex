@@ -1,0 +1,39 @@
+\psset{unit=1in,cornersize=absolute,dimen=middle}%
+\begin{pspicture}(-0.409722,-0.6875)(0.784722,0.375)%
+% dpic version 16.Jul.10 option -p for PSTricks 0.93a or later
+\psset{linewidth=0.8pt}%
+\psset{linewidth=0.8pt}%
+\ifx\MPSTPatchA\undefined{\makeatletter\def\psbezier@ii{\addto@pscode{%
+\ifshowpoints true \else false \fi\tx@OpenBezier%
+\ifshowpoints\tx@BezierShowPoints\fi}\end@OpenObj}\makeatother%
+\global\def\MPSTPatchA{}}\fi%
+\psset{arrowsize=1.1pt 4,arrowlength=1.64,arrowinset=0}%
+\psline(0,0)(0,0.25)
+(0,0.25)(0.5,0)
+(0.5,0)(0,-0.25)
+(0,-0.25)(0,0)
+\rput(0.055348,0.125){{\scriptsize$-$}}
+\rput(0.055348,-0.125){{\scriptsize$+$}}
+\psline(0.25,0.125)(0.25,0.1875)
+\psline(0.25,-0.125)(0.25,-0.1875)
+\psline(0.5,0)(0.75,0)
+\uput{2.5bp}[r](0.75,0){ $v_{out}$}
+\psline(0,0.125)(-0.125,0.125)
+\psline(0,-0.125)(-0.25,-0.125)
+\psline(-0.166667,-0.625)(-0.333333,-0.625)
+\psline(-0.194444,-0.65625)(-0.305556,-0.65625)
+\psline(-0.214286,-0.6875)(-0.285714,-0.6875)
+\psline(-0.25,-0.625)(-0.25,-0.5)
+\pscircle(-0.25,-0.375){0.125}
+\psarcn[linewidth=0.8pt](-0.291667,-0.375){0.041667}{180}{0}
+\psarc[linewidth=0.8pt](-0.208333,-0.375){0.041667}{180}{360}
+\psline(-0.25,-0.25)(-0.25,-0.125)
+\uput{2.5bp}[l](-0.375,-0.375){$ v_{in}$}
+\psline(-0.125,0.125)(-0.125,0.375)
+(-0.125,0.375)(0,0.375)
+\psline(0,0.375)(0.5,0.375)
+\psline(0.5,0.375)(0.625,0.375)
+\psline(0.625,0.375)(0.625,0)
+\pscircle[fillstyle=solid,fillcolor=black](0.625,0){0.02}
+\end{pspicture}%
+

@@ -1,0 +1,67 @@
+\psset{unit=1in,cornersize=absolute,dimen=middle}%
+\begin{pspicture}(-0.075,-1)(0.6,0)%
+% dpic version 16.Jul.10 option -p for PSTricks 0.93a or later
+\psset{linewidth=0.8pt}%
+\psset{linewidth=0.8pt}%
+\ifx\MPSTPatchA\undefined{\makeatletter\def\psbezier@ii{\addto@pscode{%
+\ifshowpoints true \else false \fi\tx@OpenBezier%
+\ifshowpoints\tx@BezierShowPoints\fi}\end@OpenObj}\makeatother%
+\global\def\MPSTPatchA{}}\fi%
+\psset{arrowsize=1.1pt 4,arrowlength=1.64,arrowinset=0}%
+\psline(0,0)(0.5,0)
+(0.5,0)(0.5,-1)
+(0.5,-1)(0,-1)
+(0,-1)(0,0)
+\pscircle[fillstyle=solid,fillcolor=black](0.1,-0.1){0.02}
+\uput{2.5bp}[l](0,-0.2){Offset null  1  }
+\psset{linewidth=2pt}%
+\psline(0,-0.2)(-0.075,-0.2)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\uput{2.5bp}[l](0,-0.4){Inv 2  }
+\psset{linewidth=2pt}%
+\psline(0,-0.4)(-0.075,-0.4)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\uput{2.5bp}[l](0,-0.6){NonInv 3  }
+\psset{linewidth=2pt}%
+\psline(0,-0.6)(-0.075,-0.6)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\uput{2.5bp}[l](0,-0.8){$-$12V 4  }
+\psset{linewidth=2pt}%
+\psline(0,-0.8)(-0.075,-0.8)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\psset{linewidth=2pt}%
+\psline(0.5,-0.8)(0.575,-0.8)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\uput{2.5bp}[r](0.5,-0.8){   5 Offset Null}
+\psset{linewidth=2pt}%
+\psline(0.5,-0.6)(0.575,-0.6)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\uput{2.5bp}[r](0.5,-0.6){  6 Output}
+\psset{linewidth=2pt}%
+\psline(0.5,-0.4)(0.575,-0.4)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\uput{2.5bp}[r](0.5,-0.4){  7 $+$12V}
+\psset{linewidth=2pt}%
+\psline(0.5,-0.2)(0.575,-0.2)
+\psset{linewidth=0.4pt}%
+\psset{linewidth=0.4pt}%
+\uput{2.5bp}[r](0.5,-0.2){  8 N/C}
+\psline(0.1,-0.5)(0.1,-0.35)
+(0.1,-0.35)(0.4,-0.5)
+(0.4,-0.5)(0.1,-0.65)
+(0.1,-0.65)(0.1,-0.5)
+\psline(0.4,-0.5)(0.6,-0.5)
+\rput(0.155348,-0.425){{\scriptsize$-$}}
+\rput(0.155348,-0.575){{\scriptsize$+$}}
+\psline(0.25,-0.425)(0.25,-0.3875)
+\psline(0.25,-0.575)(0.25,-0.6125)
+\psarc[linewidth=0.4pt](0.25,0){0.083333}{-180}{0}
+\end{pspicture}%
+
