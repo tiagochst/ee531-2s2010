@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.5.28)  2 NOV 2010 07:48
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2010.5.28)  2 NOV 2010 11:11
 entering extended mode
  %&-line parsing enabled.
 **lab5.tex
@@ -1039,7 +1039,7 @@ File: figuras/311fh.eps Graphic file (type eps)
 Here is how much of TeX's memory you used:
  15579 strings out of 256217
  272598 string characters out of 1917095
- 350174 words of memory out of 1500000
+ 350175 words of memory out of 1500000
  18488 multiletter control sequences out of 10000+200000
  20934 words of font info for 32 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
