@@ -1,0 +1,3668 @@
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
+% EE531: laboratório de Eletrônica Básica I       %  
+% Experimento 2: Diodos                           %
+% Data:20/08/2010                                 %
+% Unicamp,Campinas,São Paulo,Brasil               % 
+% Grupo:                                          %
+%       - Daniel Lins Mattos                      %
+%       - Raquel Mayumi Kawamoto                  %
+%       - Tiago Chedraoui Silva                   % 
+%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
+%\documentclass[letter]{article}  % formato impressao IC
+ % formato impressao FEEC
+
+%%% fontes %%%
+% dá suporte para os termos na língua portuguesa do Brasi
+% acentuação
+\usepackage{ae}\usepackage{aecompl}\usepackage{aeguill}% pdfs mais bonitos =)
+
+%%% outros %%%
+\usepackage{multirow}\@ifundefined{definecolor}
+ {\usepackage{color}}{}
+\usepackage{indentfirst}% retira padrao americano de paragrafos
+\usepackage{multicol}\usepackage[linkbordercolor={1 1 1},urlcolor=black,colorlinks=true]{hyperref}% links
+\usepackage{subfig}
+
+% circuito eletrico
+\usepackage{electComp}\usetikzlibrary{decorations,decorations.pathmorphing,decorations.pathreplacing}
+\usepackage{pstricks}\usepackage{boxdims}
+
+
+
+\renewcommand{\thefigure}{\arabic{figure}}
+
+\date{Outubro 1, 2010}
+% Capa estilizada %
+\newcommand*{\titleTMB}{\begingroup \centering \settowidth{\unitlength}{\LARGE EE531} {\large\scshape EE531 - Turma S}\\[0.2\baselineskip] \rule{11.0cm}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} \rule{11.0cm}{0.4pt}\\[\baselineskip] {\LARGE Transistor MOS}\\\vspace*{\baselineskip}  {\itshape Laboratório de Eletrônica Básica IV - Segundo Semestre de 2010}\\ \rule{11.0cm}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} \rule{11.0cm}{1.6pt}\\[\baselineskip] {\large\scshape Professor: José Cândido Silveira Santos Filho}\par \vfill {\normalsize   \scshape 
+    \begin{center} 
+      \begin{tabular}{  l  l  p{5cm} } 
+ 	Daniel Lins Mattos & RA: 059915\\
+        Raquel Mayumi Kawamoto & RA: 086003\\
+        Tiago Chedraoui Silva  & RA: 082941\\
+      \end{tabular} \end{center}
+    \itshape 1 de outubro de 2010    }\\[\baselineskip] \vspace{3.2pt} \endgroup}
+\end_preamble
+\use_default_options false
+\language brazilian
+\inputencoding utf8
+\font_roman ae
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry true
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 3cm
+\rightmargin 3cm
+\secnumdepth 3
+\tocdepth 0
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+titleTMB
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Este experimento visa o estudo do transistor MOSFET (transistor de efeito
+ de campo metal-óxido-semicondutor) ou simplesmente MOS, na qual é um dispositiv
+o de três terminais empregado no projeto de circuitos integrados (CIs),
+ que são circuitos fabricados sobre uma pastilha (chip) simples de silício.
+ Um MOSFET é composto de um canal de material semicondutor (geralmente o
+ silício) de tipo N ou de tipo P e é chamado, respectivamente, de NMOS ou
+ PMOS.
+ Para o presente experimento, serão determinadas, experimentalmente, as
+ curvas características de um transistor MOS e, também, este será empregado
+ como amplificador e como inversor lógico.
+ Assim como nos demais experimentos anteriores, foi utilizado o protoboard
+ para a montagem dos circuitos.
+ E os principais componentes utilizados foram um CI 4007 (três pares CMOS)
+ e um resistor de 100
+\begin_inset Formula $\Omega$
+\end_inset
+
+ e outro de 10k
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Section*
+Parte Experimental
+\end_layout
+
+\begin_layout Subsection*
+Curvas Características de um Transistor MOS
+\end_layout
+
+\begin_layout Standard
+Para esta parte inicial do experimento, é feita uma análise das curvas,
+ de corrente versus tensão, geradas pelos dados obtidos pelos dois circuitos
+ – compostos por um resistor de 100
+\begin_inset Formula $\Omega$
+\end_inset
+
+ e um transistor NMOS – a serem montados.
+ Para o primeiro circuito é traçada a curva 
+\begin_inset Formula $I_{D}xV_{DS}$
+\end_inset
+
+ e, para o segundo circuito, a curva 
+\begin_inset Formula $I_{D}xV_{GS}$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Primeiramente, foi feita a montagem do circuito da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito1"
+
+\end_inset
+
+ – composto por um resistor de 100
+\begin_inset Formula $\Omega$
+\end_inset
+
+ e um transistor NMOS.
+ Foi utilizada a fonte de tensão DC, no modo independente, para gerar as
+ tensões 
+\begin_inset Formula $V_{DS}$
+\end_inset
+
+ e 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+ .
+ E utilizando-se dois multímetros, um deles servindo como amperímetro para
+ medir 
+\begin_inset Formula $I_{D}$
+\end_inset
+
+ e o outro como voltímetro para medir 
+\begin_inset Formula $V_{DS}$
+\end_inset
+
+ , foi preenchida a tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tab1"
+
+\end_inset
+
+ com os dados obtidos pelas medições feitas.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circ1.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito 
+\begin_inset Formula $I_{D}xV_{DS}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Medidas de 
+\begin_inset Formula $V_{DS}(V)$
+\end_inset
+
+ e 
+\begin_inset Formula $I_{D}(mA)$
+\end_inset
+
+ , parametrizadas por 
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tab1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\lang english
+
+\begin_inset Tabular
+<lyxtabular version="3" rows="17" columns="8">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+=1V
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+=2V
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+=4V
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+=8V
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{DS}$
+\end_inset
+
+(V)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $I_{D}$
+\end_inset
+
+(
+\begin_inset Formula $\mu A$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{DS}$
+\end_inset
+
+(V)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $I_{D}$
+\end_inset
+
+(
+\begin_inset Formula $mA$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{DS}$
+\end_inset
+
+(V)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $I_{D}$
+\end_inset
+
+
+\begin_inset Formula $(mA)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $V_{DS}$
+\end_inset
+
+(V)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+\begin_inset Formula $I_{D}$
+\end_inset
+
+(
+\begin_inset Formula $mA$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,1
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,15
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+1,50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+1,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+7,00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+2,50
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+3,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10,90
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,3
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,9
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+1,8
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,60
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+4,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11,90
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+1,2
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+2,4
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,65
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+6,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12,00
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+1,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+3,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+7,5
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12,10
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+1,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+2,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,19
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+3,6
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+2,70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+8,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12,15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+2,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+3,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+4,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+2,70
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+9,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+12,15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+3,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+4,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+5,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+2,73
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+10,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+12,15
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+4,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,00
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+5,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,22
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+6,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,73
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+5,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+6,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+7,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+6,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+7,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+8,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+7,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+8,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+9,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+8,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+9,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+10,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,74
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+9,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+10,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,23
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+10,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\lang english
+0,10
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em seguida, com os dados da tabela, foi traçado o gráfico, da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Curva-fig1"
+
+\end_inset
+
+, das curvas 
+\begin_inset Formula $v_{DS}(V)\: x\: I_{D}(mA)$
+\end_inset
+
+ do transistor NMOS, parametrizadas por 
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+, e, no próprio gráfico, foram indicadas as regiões de operação – triodo
+ e saturação – do transistor.
+ As características de cada região de operação de um transistor de enriqueciment
+o do tipo n são apresentadas abaixo: 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Operação na região de corte:
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout List
+\labelwidthstring 00.00.0000
+Condições: 
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\surd\: V_{GS}\leq V_{t}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Operação na região de triodo:
+\series default
+ 
+\end_layout
+
+\begin_deeper
+\begin_layout List
+\labelwidthstring 00.00.0000
+Condições: 
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\surd\: V_{GS}\geq V_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\surd\: V_{GD}\geq V_{t}\Leftrightarrow V_{DS}\leq V_{GS}-V_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+Características 
+\begin_inset Formula $i-v$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\surd\: i_{D}=k_{n}\frac{W}{L}\left[(V_{GS}-V_{t})V_{DS}-\frac{1}{2}V_{DS}^{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+\series bold
+Operação na região de saturação: 
+\end_layout
+
+\begin_deeper
+\begin_layout List
+\labelwidthstring 00.00.0000
+Condições: 
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\surd\: V_{GS}\geq V_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\surd\: V_{GD}\leq V_{t}\Leftrightarrow V_{DS}\geq V_{GS}-V_{t}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+Características 
+\begin_inset Formula $i-v$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout List
+\labelwidthstring 00.00.0000
+\begin_inset Formula $\surd\: i_{D}=k_{n}\frac{W}{L}\left[(V_{GS}-V_{t})^{2}\right]$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename curva1.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Curva característica de 
+\begin_inset Formula $I_{D}\, x\, V_{DS}$
+\end_inset
+
+para o circuito da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito1"
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Curva-fig1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inicialmente, observa-se que na reta horizontal coincidente com o eixo das
+ abscissas (correspondente a 
+\begin_inset Formula $V_{GS}=V_{t}$
+\end_inset
+
+ ) o transistor está em corte, não havendo um canal induzido e contínuo.
+ As regiões de triodo (
+\begin_inset Formula $V_{DS}\leq V_{GS}-V_{t}$
+\end_inset
+
+) e de saturação (
+\begin_inset Formula $V_{DS}\geq V_{GS}-V_{t}$
+\end_inset
+
+) da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Curva-fig1"
+
+\end_inset
+
+ podem ser definidas segundo o gráfico teórico da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:NMOS"
+
+\end_inset
+
+.
+ Para encontrar o limite entre as duas regiões (triodo e saturação), iguala-se
+ 
+\begin_inset Formula $V_{DS}=V_{GS}-V_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+A figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:NMOS"
+
+\end_inset
+
+ mostra um gráfico teórico com as regiões de um transistor MOSFET tipo n.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename curvateorica.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Características 
+\begin_inset Formula $i_{D}-v_{DS}$
+\end_inset
+
+para um NMOS com o parâmretro 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ = 
+\begin_inset Formula $1,0mA/V^{2}$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:NMOS"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Analisado o circuito da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito1"
+
+\end_inset
+
+, faz-se a montagem do segundo circuito, conforme a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:4"
+
+\end_inset
+
+.
+ Como feito no circuito anterior, foi utilizado um multímetro como um amperímetr
+o para medir a corrente 
+\begin_inset Formula $I_{D}$
+\end_inset
+
+ e variou-se 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+ até encontrar a medida de 
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+ , medida por outro multímetro usado como voltímetro, estabelecida na tabela
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tab2"
+
+\end_inset
+
+.
+ As medidas de 
+\begin_inset Formula $I_{D}$
+\end_inset
+
+ foram anotadas na tabela 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tab2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circ2.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Formula $I_{D}xV_{GS}$
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Medidas de 
+\begin_inset Formula $I_{D}(mA),$
+\end_inset
+
+ parametrizadas por 
+\begin_inset Formula $V_{GS}$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tab2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="11" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Vds(V) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Id(mA) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+0,97
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2,2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3,7
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+5,33
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7,45
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9,8
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+9,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+11,9
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+10,0
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+14,0
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Com os dados da tabela 2, foi traçado a curva 
+\begin_inset Formula $I_{D}(mA)xV_{GS}(V)$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename curva2.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Curva característica de 
+\begin_inset Formula $I_{D}(mA)xV_{GS}(V)$
+\end_inset
+
+ para o circuito da figura
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Curva-característica-de"
+
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:4"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Pela análise do gráfico, pode-se concluir que o transistor encontra-se na
+ região de saturação, ou seja, para o MOSFET operar na região de saturação,
+ um canal tem de ser induzido – 
+\begin_inset Formula $v_{GS}\geq V_{t}$
+\end_inset
+
+ (canal induzido) – e estrangulado no final do dreno pelo aumento em 
+\begin_inset Formula $v_{DS}$
+\end_inset
+
+ até um valor que resulte na queda da tensão porta-dreno abaixo de 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+– 
+\begin_inset Formula $v_{GD}\leq V_{t}$
+\end_inset
+
+ (estrangulamento do canal).
+ Essa condição pode ser expressa explicitamente em termos de 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $v_{DS}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang brazilian
+ como: 
+\begin_inset Formula $v_{DS}\geq v_{GS}-V_{t}$
+\end_inset
+
+(canal estrangulado).
+ 
+\end_layout
+
+\begin_layout Standard
+Portanto, o MOSFET tipo enriquecimento canal n opera na região de saturação
+ quando 
+\begin_inset Formula $v_{GS}$
+\end_inset
+
+ for maior que 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ e a tensão de dreno não cair abaixo da tensão na porta por mais de 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ volts.
+\end_layout
+
+\begin_layout Standard
+A figura abaixo mostra o gráfico teórico para um transistor que se encontra
+ no modo de saturação.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename curva2teorica.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Curva característica 
+\begin_inset Formula $i_{D}-v_{GS}$
+\end_inset
+
+ para transistor NMOS na saturação (
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ = 1 V, 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ = 
+\begin_inset Formula $1,0mA/V^{2}$
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Curva-característica-teo"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para determinar os valores dos parâmetros 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ e 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ do transistor MOSFET, foi feito um ajuste da reta 
+\begin_inset Formula $V_{GS}x\sqrt{I_{D}}$
+\end_inset
+
+ – pelo método dos mínimos quadrados – usando-se os dados da tabela 2 e
+ sabendo-se que, na saturação,
+\begin_inset Formula $\sqrt{I_{D}}=\sqrt{\frac{1}{2}\mu_{n}C_{ox}\frac{W}{L}}(V_{GS}-V_{t})$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+O resultado pra este ajuste encontra-se no gráfico a seguir.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename reta.png
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Curva característica 
+\begin_inset Formula $V_{GS}x\sqrt{I_{D}}$
+\end_inset
+
+para o circuito da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sabendo-se que a equação de 
+\begin_inset Formula $\sqrt{I_{D}}$
+\end_inset
+
+ é da forma de uma equação de reta 
+\begin_inset Formula $y=ax+b$
+\end_inset
+
+ , pode-se ver que o termo 
+\begin_inset Formula $\sqrt{\frac{1}{2}\mu_{n}C_{ox}\frac{W}{L}}$
+\end_inset
+
+na fórmula corresponde ao coeficiente angular da reta e que 
+\begin_inset Formula $-\sqrt{\frac{1}{2}\mu_{n}C_{ox}\frac{W}{L}}V_{t}$
+\end_inset
+
+corresponde ao coeficiente linear.
+ Portanto, tais coeficientes foram calculados para que seja possível descobrir
+ os parâmetros 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ e 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+Os valores dos coeficientes angular e linear são, respectivamente, 
+\begin_inset Formula $0,01333$
+\end_inset
+
+ e 
+\begin_inset Formula $0,00943$
+\end_inset
+
+ .
+\end_layout
+
+\begin_layout Standard
+Logo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $\sqrt{\frac{1}{2}\mu_{n}C_{ox}\frac{W}{L}}=0,01333\Rightarrow\mu_{n}C_{ox}\frac{W}{L}=0,01333^{2}*2\Rightarrow\mu_{n}C_{ox}\frac{W}{L}=3,553778*10^{-4}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+e
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $-\sqrt{\frac{1}{2}\mu_{n}C_{ox}\frac{W}{L}}V_{t}=-0,00943\Rightarrow V_{t}=\frac{0,00943}{0,01333}\Rightarrow V_{t}=0,704268$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Conclui-se que os valores de 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ [A/
+\begin_inset Formula $V^{2}$
+\end_inset
+
+] e de 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ [V] são, respectivamente 
+\begin_inset Formula $3,6*10^{-4}$
+\end_inset
+
+, e 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $0,71$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+\lang brazilian
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+Com base nos parâmetros determinados acima e nas curvas experimentais e
+ teóricas do circuito da figura 1, pode-se concluir que há diferenças entre
+ o transistor teórico e o transistor utilizado no experimento.
+ Uma diferença da curva teórica para a experimental é que as escalas dos
+ gráficos não são iguais devido a diferença no parametro 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+, porém há uma semelhança quanto ao comportamento das curvas.
+ Continuando a análise das curvas juntamente com os valores dos parâmetros
+ encontrados, vê-se que o valor de 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ é o mesmo para ambos os graficos (teorico e experimental) mas o valor de
+ 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ é maior no transistor utilizado no experimento.
+ 
+\end_layout
+
+\begin_layout Standard
+Além disso, de acordo com as figuras 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Curva-característica-de"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Curva-característica-teo"
+
+\end_inset
+
+, esperava-se obter-se um valor de 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ próximo a 1V, e ao obter o valor de 
+\begin_inset Formula $V_{t}=0,71V$
+\end_inset
+
+ foi encontrado um valor cujo erro é de 
+\begin_inset Formula $29\%$
+\end_inset
+
+.
+ Para 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+, de acordo com os gráficos 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Curva-característica-de"
+
+\end_inset
+
+ e 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Curva-característica-teo"
+
+\end_inset
+
+, como a ordem de grandeza da corrente é em miliampères e dado que 
+\begin_inset Formula $V_{GS}-V_{t}$
+\end_inset
+
+ apresenta uma ordem de grandeza em volts, esparasse que 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ possuisse valor muito pequeno sendo ele entre as ordems de 
+\begin_inset Formula $10^{-3}A/V^{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $10^{-4}A/V^{2}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Portanto, os valores obtidos são aceitáveis e comparáveis ao valores teóricos
+ e práticos obtidos.
+ 
+\end_layout
+
+\begin_layout Section*
+Aplicações Analógicas
+\end_layout
+
+\begin_layout Standard
+Para esta parte do experimento, foi montado o circuito amplificador da figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:circ2"
+
+\end_inset
+
+.
+ Foi aplicado um sinal de entrada senoidal de 60 mVpp e freqüência de 1kHz
+ e foi monitorada as tensões 
+\begin_inset Formula $v_{in}$
+\end_inset
+
+e 
+\begin_inset Formula $v_{out}$
+\end_inset
+
+ no osciloscópio, variando o offset 
+\begin_inset Formula $V_{IN}$
+\end_inset
+
+ da entrada, até que fosse observado um ganho de 
+\begin_inset Formula $-10$
+\end_inset
+
+ para o amplificador.
+ A curva encontrada para o amplificador encontra-se ilustrada abaixo e ela
+ foi obtida quando o valor 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ foi de 2.87 V.
+ Este valor foi comparado com o valor teórico para o mesmo ganho de -10
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+Muitos projetos de circuitos analógicos envolvem amplificadores de um ou
+ múltiplos estágios.
+ Entre os amplificadores de um único estágio, um dos mais simples é o Fonte
+ Comum, ilustrado na Figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:circ2"
+
+\end_inset
+
+.
+ O mesmo apresenta um ganho inversor, ou seja, a tensão de saída possui
+ sinal oposto à tensão de entrada.
+ Isso pôde ser comprovado no osciloscópio, tal como mostra a imagem obtida
+ dos sinais de entrada e saída mais abaixo.
+ Essa montagem também sofre efeito Miller, ou seja, a capacitância de entrada
+ pode ser elevada, levando o circuito a ter um pólo dominante em baixa freqüênci
+a.
+ Essa última característica pode se tornar um problema se o circuito  operar
+ em altas freqüências, pois o ganho diminuirá a partir dessa freqüência
+ de corte vista da entrada.
+ 
+\end_layout
+
+\begin_layout Standard
+Nessa montagem (Amplificador Fonte Comum), que foi realizada em aula, é
+ possível deduzir facilmente, a partir do modelo de pequenos sinais, que
+ o ganho de malha é : 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{v}=-\frac{Rr_{0}gm}{R+r_{0}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Como geralmente 
+\begin_inset Formula $r_{0}\gg R$
+\end_inset
+
+, é possível aproximar o ganho 
+\begin_inset Formula $A_{v}$
+\end_inset
+
+ :
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{v}=-Rg_{m}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $A_{v}=-10=-10^{4}g_{m}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $g_{m}=\mu_{n}C_{ox}\frac{W}{L}V_{ov}=10^{-3}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{ov}=V_{IN}-V_{t}=\frac{10^{-3}}{\mu_{n}C_{ox}\frac{W}{L}}=\frac{10^{-3}}{3,6*10^{-4}}=2,78V$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{IN}=V_{ov}+V_{t}=2.78+0.71=3.49V$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Comparando-se o valor teórico calculado e o valor experimental obtido de
+ 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+, pode-se ver que tais valores são próximos, com um erro de 17.8%.
+ Tal erro pode ter sido acarretado pelas aproximações do ro tendendo a infinito
+ e dos parametros 
+\begin_inset Formula $\mu_{n}C_{ox}\frac{W}{L}$
+\end_inset
+
+ e 
+\begin_inset Formula $V_{t}$
+\end_inset
+
+ calculados.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circ3.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Amplificador
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:circ2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename fig3.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Curvas 
+\begin_inset Formula $v_{in}$
+\end_inset
+
+e 
+\begin_inset Formula $v_{out}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+Aplicações Digitais
+\end_layout
+
+\begin_layout Standard
+Inicialmente, foi montado o circuito inversor lógico, como esquematizado
+ na figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Circuito3"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename circ4.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito inversor lógico
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Circuito3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um inversor CMOS básico utiliza dois transistores MOSFETs do tipo enriquecimento
+ casados: um 
+\begin_inset Formula $Q_{N}$
+\end_inset
+
+, com um canal n e outro 
+\begin_inset Formula $Q_{P}$
+\end_inset
+
+, com um canal p.
+ O corpo de cada dispositivo está conectado à sua fonte e, portanto, nenhum
+ efeito de corpo deve ser considerado.
+ 
+\end_layout
+
+\begin_layout Standard
+Um inversor lógico funciona da seguinte maneira: quando a entrada está em
+ nível alto (
+\begin_inset Formula $V_{I}=V_{DD}$
+\end_inset
+
+), a tensão de saída será de zero volts (
+\begin_inset Formula $V_{I}=$
+\end_inset
+
+0 V); quando a entrada estiver em nível baixo (
+\begin_inset Formula $0V$
+\end_inset
+
+), a saída terá uma tensão igual a 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Na entrada do circuito foi aplicado um sinal senoidal com as seguintes caracterí
+sticas: 
+\begin_inset Formula $V_{pp}=5V$
+\end_inset
+
+, 
+\begin_inset Formula $V_{offset}=2,5V$
+\end_inset
+
+ e frequencia = 100 Hz.
+\end_layout
+
+\begin_layout Standard
+A imagem ilustrada abaixo (figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:11"
+
+\end_inset
+
+), da curva característica de transferência deste inversor, foi obtida utilizand
+o-se o modo de operação XY do osciloscópio.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename 5inv.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Característica de transferência de tensão do inversor CMOS
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:11"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Observa-se que inicialmente, quando 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ está em nível baixo, o transistor canal 
+\begin_inset Formula $n$
+\end_inset
+
+ está em corte e a tensão de saída é aproximadamente 
+\begin_inset Formula $V_{DD}$
+\end_inset
+
+ = 5V .
+ Já no outro extremo, com 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ em nível alto (próximo de VDD), o transistor canal 
+\begin_inset Formula $p$
+\end_inset
+
+ está em corte e a tensão de saída está em nível baixo, 
+\begin_inset Formula $0V$
+\end_inset
+
+ .
+ Percebe-se ainda, que quando 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ encontra-se muito próximo de 
+\begin_inset Formula $\frac{V_{DD}}{2}$
+\end_inset
+
+, ambos os transistores estão na saturação e é nessa região (linear) que
+ operam os amplificadores.
+ Antes desse trecho, o transistor NMOS encontra-se em saturação e o PMOS
+ na região de triodo, e depois desse trecho os papéis se invertem, com o
+ NMOS em triodo e o PMOS em saturação.
+ A figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Tempo-de-subida"
+
+\end_inset
+
+, na qual esboça uma curva característica teórica de um inversor, mostra
+ as regiões de operação dos transistores NMOS e PMOS casados.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename invlogiteoria.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Característica de transferência de tensão do inversor CMOS (curva teórica)
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Em seguida, foi aplicada na entrada uma forma de onda quadrada com as mesmas
+ características anteriores (
+\begin_inset Formula $V_{pp}=5V$
+\end_inset
+
+, 
+\begin_inset Formula $V_{offset}=2,5V$
+\end_inset
+
+ e frequencia = 100 Hz ) e o osciloscópio foi retirado do modo XY e visualizou-s
+e a entrada e a saída em função do tempo.
+ Foram medidos os tempos de subida, de descida e de atraso da saída, todos
+ ilustrados a seguir.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename r.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tempo de subida 
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Tempo-de-subida"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename desc.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tempo de descida
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename atraso.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tempo de atraso de low pra high
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hlatr.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tempo de atraso de high pra low
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Foi obtido um valor de tempo de subida (tempo para o sinal mudar de um nível
+ baixo de tensão (
+\begin_inset Formula $V_{out}$
+\end_inset
+
+ =0 V) para um alto (
+\begin_inset Formula $V_{out}$
+\end_inset
+
+ = VDD )) de 37,0 ns e um tempo de descida (tempo para o sinal mudar de
+ um nível alto (Vout = VDD) de tensão para um nível baixo de tensão (V=0
+ V)) de 26,8 ns.
+ Caso a entrada fosse ideal e os dois transistores MOSFETs possuíssem exatamente
+ as mesmas características, o tempo de subida e descida deveriam ser iguais
+ devido à simetria do circuito.
+\end_layout
+
+\begin_layout Standard
+Posteriormente, mediu-se o atraso de propagação que determina a velocidade
+ de operação de um circuito digital e é influenciado pelo tempo de subida
+ e descida, já que utiliza a diferença de tempo entre o momento em que a
+ onda de entrada está no meio da transição entre o valor máximo e mínimo
+ ou o contrário, e o momento em que a onda de saída também estiver no meio
+ da transição.
+ Assim, se o tempo de subida e descida da saída for alto, maior será o atraso
+ de propagação.
+\end_layout
+
+\begin_layout Standard
+A mudança de uma voltagem alta para uma baixa do sinal de entrada possui
+ como atraso o tempo de
+\begin_inset Formula $t_{phl}=26,4\, ns$
+\end_inset
+
+ enquanto que a mudança de um sinal baixo para um alto possui como atraso
+ 
+\begin_inset Formula $t_{plh}=17,0\, ns$
+\end_inset
+
+.
+ Logo, o tempo de propagação vale a média entre ambos os atrasos, ou seja,
+ 
+\begin_inset Formula $t_{p}=21,7\, ns$
+\end_inset
+
+ , implicando em uma freqüência máxima de operação de 
+\begin_inset Formula $f_{max}=46,08\, MHz$
+\end_inset
+
+.
+\end_layout
+
+\end_body
+\end_document
