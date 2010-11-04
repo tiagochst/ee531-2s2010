@@ -1,9 +1,16 @@
-#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0.0alpha5 created this file. For more info see http://www.lyx.org/
+\lyxformat 398
 \begin_document
 \begin_header
 \textclass article
 \begin_preamble
+
+\usepackage{ae}\usepackage{aecompl}
+
+\usepackage{caption}\usepackage{float}% comentarios
+
+
+
 %-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
 % EE531: laboratório de Eletrônica Básica I       %  
 % Experimento 2: Diodos                           %
@@ -15,7 +22,7 @@
 %       - Tiago Chedraoui Silva                   % 
 %-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%-%
 %\documentclass[letter]{article}  % formato impressao IC
- % formato impressao FEEC
+% formato impressao FEEC
 
 %%% fontes %%%
 % dá suporte para os termos na língua portuguesa do Brasi
@@ -24,7 +31,9 @@
 
 %%% outros %%%
 \usepackage{multirow}\@ifundefined{definecolor}
+ {\@ifundefined{definecolor}
  {\usepackage{color}}{}
+}{}
 \usepackage{indentfirst}% retira padrao americano de paragrafos
 \usepackage{multicol}\usepackage[linkbordercolor={1 1 1},urlcolor=black,colorlinks=true]{hyperref}% links
 \usepackage{subfig}
@@ -46,45 +55,63 @@
         Raquel Mayumi Kawamoto & RA: 086003\\
         Tiago Chedraoui Silva  & RA: 082941\\
       \end{tabular} \end{center}
-    \itshape 1 de outubro de 2010    }\\[\baselineskip] \vspace{3.2pt} \endgroup}
+    \itshape 12 de Novembro de 2010    }\\[\baselineskip] \vspace{3.2pt} \endgroup}
+
+
+
+\usepackage{babel}
 \end_preamble
 \use_default_options false
+\maintain_unincluded_children false
 \language brazilian
 \inputencoding utf8
+\fontencoding global
 \font_roman ae
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_xetex false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref false
-\papersize a4paper
+\papersize default
 \use_geometry true
-\use_amsmath 1
+\use_amsmath 2
 \use_esint 1
+\use_mhchem 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
 \leftmargin 3cm
 \rightmargin 3cm
 \secnumdepth 3
 \tocdepth 0
 \paragraph_separation indent
-\defskip medskip
+\paragraph_indentation default
 \quotes_language english
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -110,7 +137,53 @@ titleTMB
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
+
+\lang english
+Este experimento visa ao estudo de um amplificador operacional, especialmente
+ o Amp op com realimentação negativa.
+ Para tal, foi utilizado o amplificador operacional LM741, na qual é um
+ dos amplificadores comerciais mais populares existentes.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Um amplificador operacional é um amplificador de ganho muito alto com uma
+ impedância de entrada muito alta (normalmente alguns megaohms) e uma baixa
+ impedância de saída (menos que 100
+\lang brazilian
+
+\begin_inset Formula $\Omega$
+\end_inset
+
+,
+\lang english
+).
+ O circuito básico é construído utilizando-se um amplificador de diferença
+ com duas entradas (positiva e negativa) e pelo menos uma saída.
+ A entrada positiva ou terminal de entrada não inversora (+) produz uma
+ saída que está em fase com o sinal aplicado, enquanto um sinal de entrada
+ negativa ou terminal de entrada inversora (-) resulta em uma saída com
+ polaridade oposta.
+ Para operar, os amplificadores devem ser alimentados com uma fonte cc;
+ sendo assim, o circuito integrado amplificador operacional necessita de
+ uma fonte cc simétrica como mostrado na figura.
+ Os dois terminais, 4 e 5, que saem do encapsulamento do Amp Op devem ser
+ conectados às tensões positiva 
+\begin_inset Formula $V_{cc}$
+\end_inset
+
+ e negativa 
+\begin_inset Formula $-V_{EE}$
+\end_inset
+
+, respectivamente.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
 placement H
 wide false
 sideways false
@@ -118,12 +191,1317 @@ status open
 
 \begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename figuras/31bck.png
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Descrição dos pinos de um LM741
+\end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top" width="0">
+<column alignment="none" valignment="top" width="10cm">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Pino 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Descrição
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+1 e 5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Offset - Os pinos 1 e 5 costumam ser conectados a um resitor variável, juntament
+e com a entrada negativa da alimentação, buscando equilibrar as tensões
+ da entrada.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entrada inversora do amplificador (
+\begin_inset Formula $V_{-}$
+\end_inset
+
+) 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Entrada não inversora do amplificador (
+\begin_inset Formula $V_{+}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alimentação Negativa (
+\begin_inset Formula $V_{s-}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tensão de saída
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Alimentação positiva (
+\begin_inset Formula $V_{s-}$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+8 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Não conectado
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename ".lyx"
+
+\end_inset
+
+circ1.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Pinos de saída de um 741 
+\begin_inset CommandInset label
+LatexCommand label
+name "circ:1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O Amp Op é projetado para operar como um sensor de diferença entre os sinais
+ de tensão aplicados nos seus dois terminais de entrada (isto é, o valor
+ de 
+\begin_inset Formula $v_{2}-v_{1}$
+\end_inset
+
+), multiplicando-se esse valor por um número A (ganho em malha aberta),
+ que resulta em uma tensão 
+\begin_inset Formula $A(v_{2}-v_{1})$
+\end_inset
+
+, que aparece no terminal de saída (a tensão em um terminal significa a
+ tensão entre o terminal e o terra).
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Em um Amp Op ideal, supõe-se que nenhuma corrente de entrada seja drenada;
+ isto é, a corrente do sinal no terminal de entrada inversora e a corrente
+ do sinal no terminal de entrada não inversora são ambas iguais a zero.
+ Disso conclui-se que a impedância de entrada do amp op é supostamente infinita.
+ O terminal de saída do Amp op ideal é como se fosse o terminal de uma fonte
+ de tensão ideal, ou seja, a tensão entre o terminal de saída e o terrra
+ será sempre igual a 
+\begin_inset Formula $A(v_{2}-v_{1})$
+\end_inset
+
+, independentemente da corrente que possa ser drenada do terminal de saída
+ por uma impedância de carga.
+ Resumindo, a impedância de saída do amp op ideal é supostamente igual a
+ zero.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Outra característica do Amp op ideal é amplificar sinais de qualquer freqüência
+ com igual ganho, possuindo, dessa maneira, largura de faixa de passagem
+ infinita.
+ O Amp op ideal deve ter um valor de ganho A cujo valor é muito alto ou
+ idealmente infinito.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Ao longo do presente experimento serão vistas duas configurações básicas
+ para circuito empregando um Amp op e dois resistores: a configuração não
+ inversora e a configuração inversora.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Para o atual experimento foram utilizados o protoboard para a montagem dos
+ circuitos - assim como nos experimentos anteriores - um CI LM741, quatro
+ resistores de 1
+\lang brazilian
+
+\begin_inset Formula $k\Omega$
+\end_inset
+
+,
+\lang english
+, um resistor de 10
+\lang brazilian
+
+\begin_inset Formula $k\Omega$
+\end_inset
+
+,
+\lang english
+, um resistor de 20k
+\lang brazilian
+
+\begin_inset Formula $\Omega$
+\end_inset
+
+,
+\lang english
+ e um de 200k
+\lang brazilian
+
+\begin_inset Formula $\Omega$
+\end_inset
+
+
+\lang english
+; e um trimpot de vinte voltas de 10
+\lang brazilian
+
+\begin_inset Formula $k\Omega$
+\end_inset
+
+
+\lang english
+.
+\end_layout
+
+\begin_layout Standard
+Este experimento visa o estudo do amplificador operacional em circuito integrado
+ LM741, que é um dos amplificadores comerciais mais populares.
+ Um desenho da função de cada pino do integrado é apresentado na figura
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "circ:1"
+
+\end_inset
+
+ e sua descrição é apresentada na tabela a seguir:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Itemize
+Off-set - o pino 1 e o pino 5 costumam ser conectados a um resitor variável,
+ juntamente com a entrada negativa da alimentação, buscando equilibrar as
+ tensões da entrada.
+ 
+\end_layout
+
+\begin_layout Itemize
+Entrada inversora.
+ 
+\end_layout
+
+\begin_layout Itemize
+Entrada não inversora.
+ 
+\end_layout
+
+\begin_layout Itemize
+Alimentação negativa 
+\end_layout
+
+\begin_layout Itemize
+Outro pino do off-set.
+ 
+\end_layout
+
+\begin_layout Itemize
+Tensão de saída.
+ 
+\end_layout
+
+\begin_layout Itemize
+Alimentação positiva.
+ 
+\end_layout
+
+\begin_layout Itemize
+Não conectado.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3mm
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Section*
+Parte experimental
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Inicialmente, monta-se o circuito esquematizado na figura 
+\lang brazilian
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "circ:4"
+
+\end_inset
+
+
+\lang english
+, na qual é um amplificador operacional em malha aberta.
+ Um sinal senoidal de baixa frequência e com a menor amplitude possível
+ foi aplicado na entrada do circuito.
+ A frequência aplicada foi de 100Hz com uma amplitude de 10
+\begin_inset Formula $mV_{pp}$
+\end_inset
+
+.
+ O sinal de saída foi medido com o osciloscópio e a curva relacionada a
+ tal circuito foi ilustrada na figura 
+\lang brazilian
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "3.1"
+
+\end_inset
+
+
+\lang english
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3mm
+\end_inset
+
+ 
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename ".lyx"
+
+\end_inset
+
+circ4.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Amplificador operacional em malha aberta 
+\begin_inset CommandInset label
+LatexCommand label
+name "circ:4"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/31bck.eps
+	scale 50
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Onda de saída do circuito da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "circ:4"
+
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "3.1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+É possível concluir, observando as curvas de saída, que no amplificador
+ operacional a tensão de saída fica limitada ao intervalo de -12 V a +12
+ V.
+ Isso já era esperado.
+ Esse fato leva a uma onda praticamente quadrada na saída, para um ganho
+ A muito elevado.
+ No caso da nossa equipe, isso não ocorreu perfeitamente, provavelmente
+ devido a desbalanceamentos no AMP-OP, ou problemas na montagem do circuito.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Foi visto como um circuito amplificador em malha aberta funciona.
+ Agora serão analisados circuitos amplificadores em malha fechada, isto
+ é, configurações de circuitos realimentados.
+ A figura 3 esquematiza um circuito de estrutura geral de realimentação.
+ A realimentação pode ser negativa (degenerativa) ou positiva (regenerativa),
+ porém, para o presente experimento será apenas abordado a realimentação
+ negativa.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Antes de inicializar a análise de circuitos em malha fechada, deduziu-se
+ a expressão do ganho para um amplificador com realimentação negativa.
+ Percebe-se que este tipo de realimentação possibilita que o ganho diminua
+ e passe a ser bem controlado pelos componentes do caminho de realimentação.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O primeiro circuito em malha fechada a ser analisado é o esquematizado na
+ figura 4, o circuito buffer.
+ Tal circuito é montado no protoboard e nele aplica-se um sinal senoidal
+ na entrada e sua saída é verificada com o osciloscópio.
+ Com o osciloscópio no modo X-Y, a função de transferência 
+\begin_inset Formula $V_{IN}$
+\end_inset
+
+ versus 
+\begin_inset Formula $V_{OUT}$
+\end_inset
+
+ é observada.
+ Em seguida, é aplicada um sinal de entrada quadrado com amplitude de 10
+\begin_inset Formula $V{}_{pp}$
+\end_inset
+
+ e 
+\begin_inset Formula $V{}_{offset}$
+\end_inset
+
+de 5 V.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+V_{+}=V_{in}\\
+V_{-}=BV_{out}
+\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -8mm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+V_{out} & =A(V_{+}-V_{-})\\
+ & =A(V_{in}-BV_{out})\\
+ & =AV_{in}-ABV_{out}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace -5mm
+\end_inset
+
+ 
+\begin_inset Formula \[
+(1+AB)V_{out}=AV_{in}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+\frac{V_{out}}{V_{in}}=\frac{A}{1+AB}\label{Ganho de malha fechada A_f}\end{equation}
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+captionof*
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+figure
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+{
+\end_layout
+
+\end_inset
+
+Ganho de malha fechada 
+\begin_inset Formula $A_{f}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+\lim_{A\to\infty}A_{f}=\lim_{A\to\infty}\frac{A}{1+AB}=\frac{1}{B}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ou seja, para valores elevados de A, o ganho de malha fechada 
+\begin_inset Formula $A_{f}$
+\end_inset
+
+ é facilmente controlável pelo fator de realimentação B.
+ Para B>1, 
+\begin_inset Formula $A_{f}<A$
+\end_inset
+
+.
+ Quer dizer, o ganho de malha fechada pode ser feito menor que o ganho de
+ malha aberta.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+V_{-}=BV_{out}=V_{out}\rightarrow B=1\\
+A_{f}=A_{v}=\frac{A}{1+A.1}\approxeq1\;\;\;\text{para}\;\;\; A\gg1
+\end{eqnarray*}
+
+\end_inset
+
+ Ou seja, é um Buffer.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h!
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset include
+LatexCommand input
+filename ".lyx"
+
+\end_inset
+
+circ3.tex
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito Buffer 
+\begin_inset CommandInset label
+LatexCommand label
+name "circ:3"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Posteriormente, o circuito da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "circ:3"
+
+\end_inset
+
+ é montado e, na entrada, é aplicado um sinal senoidal.
+ Utilizando o modo X-Y do osciloscópio, o gráfico da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "3.5"
+
+\end_inset
+
+ é obtido.
+\end_layout
+
+\begin_layout Standard
+Do gráfico obtemos um ganho 
+\begin_inset Formula $\frac{V_{out}}{V_{in}}\approxeq1$
+\end_inset
+
+, já que para cada volt aumentado na saída, sua entrada também aumenta em
+ um volt.
+ Porém, se a entrada aumentar consideravelmente, a saída deve-se saturar
+ em 12 Volts, perdendo, portanto, a linearidade do gráfico, que para valores
+ de entrada maiores apresentará uma saída constante igual a 12 volts e para
+ valores menores uma saída constante a -12 Volts.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/35xy.eps
+	scale 50
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Função de transferência 
+\begin_inset Formula $V_{in}$
+\end_inset
+
+ x 
+\begin_inset Formula $V_{out}$
+\end_inset
+
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "3.5"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+O valor experimental do Slew Rate é aproximadamente 0,88 V/us, sendo que
+ o valor típico do SR para um amplificador LM741A é de 0,7 V/us.
+ O valor é satisfatoriamente próximo daquele fornecido pelo fabricante no
+ data sheet do componente.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/36.eps
+	scale 50
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Feito o estudo do circuito buffer, o presente experimento tratará agora
+ de duas configurações básicas para circuito empregando um Amp op e dois
+ resistores: a configuração não inversora e a configuração inversora.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A primeira configuração básica para um circuito empregando um Amp op e dois
+ resistores a ser estuda é a configuração inversora.
+ A figura ..
+ mostra a configuração não inversora.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Nela, o sinal de entrada 
+\begin_inset Formula $v_{I}$
+\end_inset
+
+ é aplicado diretamente ao terminal de entrada positivo do Amp op, enquanto
+ um dos terminais de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ é conectado ao terra.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Supondo que o Amp op seja ideal com ganho infinito, existe um curto circuito
+ virtual entre os seus dois terminais de entrada.
+ Portanto, a diferença dos sinais de entrada é 
+\begin_inset Formula $v_{Id}=v_{O}/A=0$
+\end_inset
+
+ para A = 
+\begin_inset Formula $\infty$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Logo, a tensão no terminal de entrada inversora será igual à do terminal
+ de entrada não inversora, na qual está aplicada a tensão 
+\begin_inset Formula $v_{I}$
+\end_inset
+
+.
+ A corrente através de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ pode ser determinada como 
+\begin_inset Formula $v_{I}/R_{1}$
+\end_inset
+
+.
+ Pelo fato de a impedância de entrada do Amp op ser infinita, essa corrente
+ circulará por
+\begin_inset Formula $R_{2}$
+\end_inset
+
+.
+ A tensão de saída pode ser estabelecida por 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $v_{O}=v_{I}+(v_{I}/R_{1})R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A qual produz 
+\begin_inset Formula $v_{O}/v_{I}=1+R_{2}/R1$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O ganho em malha fechada também pode ser obtido segundo as seguintes consideraçõ
+es: como a corrente na entrada inversora do amp op é nula, o circuito composto
+ por 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ atua como um divisor de tensão no caminho da realimentação negativa, fazendo
+ com que uma fração da tensão de saída apareça no terminal de entrada inversora
+ do Amp op.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $v_{I}=v_{O}(R_{1}/R_{1}+R_{2})$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Então, o ganho infinito do Amp op e o curto- circuito resultante entre os
+ dois terminais de entrada forçam essa tensão a ser igual à do terminal
+ da entrada positiva, assim 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $v_{O}(R_{1}/R_{1}+R_{2})=v_{I}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O circuito não inversor a ser montado no experimento é projetado para que
+ possua um ganho de +21.
+ Para tanto, as resistências a serem utilizadas são de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ = 1k
+\begin_inset Formula $\Omega$
+\end_inset
+
+ e de 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ = 20k
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O sinal de entrada do circuito não-inversor é aterrado para que seja possível
+ medir com o osciloscópio o offset refletido para a saída.
+ Como uma forma de tentar reduzir o offset causado por correntes de polarização
+ de entrada, introduziu-se um resistor auxiliar R como ilustrado na figura
+ ?.
+ O valor dessa resistência inserida é 
+\begin_inset Formula $R{}_{1}||$
+\end_inset
+
+
+\begin_inset Formula $R{}_{2}$
+\end_inset
+
+.
+ Portanto, R = 1k
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Feita esta alteração no circuito, medi-se novamente o offset na saída e
+ compara-se tal resultado com o anterior.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Em seguida, um potenciômetro é adicionado ao circuito conforme a figura
+ ? a fim de minimizar o offset devido ao desbalanceamento interno do amplificado
+r operacional.
+ Varia-se o potenciômetro e observa-se o que ocorre com o offset na saída.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/37.eps
+	scale 50
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Justificativa para 
+\begin_inset Formula $R=R_{1}\parallel R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As correntes de polarização nas entradas inversora e não-inversora do AMP-OP
+ geram uma queda de tensão nas extremidades dos componentes do circuito,
+ criando assim uma tensão de offset.
+\end_layout
+
+\begin_layout Standard
+Se a resistência vista da entrada inversora for a mesma que a da entrada
+ não-inversora, a queda de tensão será a mesma nessas duas extremidades,
+ teoricamente eliminando o offset.
+ A resistência vista da entrada inversora é 
+\begin_inset Formula $R_{1}\parallel R_{2}$
+\end_inset
+
+, portanto escolhe-se esse valor para R.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename figuras/382cr.eps
+	scale 50
+
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -151,13 +1529,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figuras/31bck.png
+	filename figuras/382cres.eps
+	scale 50
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -175,57 +1558,75 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Para minimizar o offset devido ao desbalanceamento interno do amplificador
+ operacional, é adicionado o potenciômetro ao circuito, resultando no circuito
+ da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "circ:5"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 3mm
+\end_inset
+
+ 
 \begin_inset Float figure
-placement H
+placement h!
 wide false
 sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/382cres.png
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename ".lyx"
+
+\end_inset
+
+circ5.tex
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
+Ajuste de offset 
+\begin_inset CommandInset label
+LatexCommand label
+name "circ:5"
 
 \end_inset
 
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/31bck.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -247,13 +1648,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figuras/35xy.png
+	filename figuras/39.eps
+	scale 50
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
@@ -271,6 +1677,281 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Outra configuração em malha fechada a ser estudada no presente experimento
+ é a configuração inversora, mostrada na figura ?.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Ela consiste em um Amp op e dois resistores 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ e 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+.
+ O resistor 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ está conectado entre o terminal de saída do Amp op e o terminal de entrada
+ inversora ou negativa.
+ Portanto, diz-se que 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ aplica uma realimentação negativa.
+ Observa-se ainda que 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ fecha a malha em torno do amp op, o terminal positivo foi aterrado e um
+ resistor 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ foi conectado entre o terminal negativo e uma fonte de sinal de entrada
+ com uma tensão 
+\begin_inset Formula $v_{I}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+O ganho em malha fechada G, da configuração inversora é definido como 
+\begin_inset Formula $G=v_{O}/v_{I}$
+\end_inset
+
+ .
+ Supondo-se, para a análise, um Amp op ideal, o ganho A é muito grande (idealmen
+te infinito).
+ Supondo-se também que o circuito está “trabalhando” e produzindo uma tensão
+ de saída finita, então a tensão entre os terminais de entrada do Amp op
+ deve ser desprezivelmente pequena ou idealmente nula.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $v_{2}-v_{1}=v_{O}/A=0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Da equação acima, segue que a tensão no terminal de entrada inversora (
+\begin_inset Formula $v_{1}$
+\end_inset
+
+) é dada por 
+\begin_inset Formula $v_{1}=v_{2}$
+\end_inset
+
+ pelo fato do ganho A aproximar-se do infinito e em conseqüência, a tensão
+ 
+\begin_inset Formula $v_{1}$
+\end_inset
+
+ aproxima-se de e idealmente iguala-se a 
+\begin_inset Formula $v_{2}$
+\end_inset
+
+.
+ Determinado v1, aplica-se a lei de Ohm para calcular a corrente 
+\begin_inset Formula $i_{1}$
+\end_inset
+
+ através de 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $i_{1}=(v_{I}-v_{1})/R_{1}=\frac{v_{I}-0}{R_{1}}=v_{I}/R_{1}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Como a corrente não pode circular pelo Amp op, visto que sua impedância
+ de entrada é infinita, a corrente drenada é zero.
+ Portanto, 
+\begin_inset Formula $i_{1}$
+\end_inset
+
+ terá de circular por 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ e pela baixa impedância do terminal de saída.
+ Aplica-se novamente a lei de Ohm em 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ para determinar 
+\begin_inset Formula $v_{O}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+\begin_inset Formula $v_{O}=v_{I}-i_{1}R_{2}=0-(v_{I}/R_{1})R_{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Portanto, 
+\begin_inset Formula $\frac{v_{O}}{v_{I}}=-\frac{R_{2}}{R_{1}}$
+\end_inset
+
+.
+ Este resultado corresponde ao ganho em malha fechada, que é simplesmente
+ a razão das duas resistências 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ e 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+.
+ O sinal negativo significa que o ganho em malha fechada provoca uma inversão
+ no sinal de saída em relação ao sinal de entrada.
+ 
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+Um circuito inversor com ganho de -10 é montado usando-se resistências de
+ 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ = 1k
+\begin_inset Formula $\Omega$
+\end_inset
+
+ e 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ = 10k
+\begin_inset Formula $\Omega$
+\end_inset
+
+.
+ Em seguida, troca-se a resistência 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ = 10k
+\begin_inset Formula $\Omega$
+\end_inset
+
+ por outra de resistência 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ = 200k
+\begin_inset Formula $\Omega$
+\end_inset
+
+ para que o circuito amplificador inversor tenha um ganho de -200.
+\end_layout
+
+\begin_layout Standard
+
+\lang english
+A frequência de corte 
+\begin_inset Formula $f{}_{0}$
+\end_inset
+
+do amplificador é medida.
+ O valor medido é ..., enquanto que o valor teórico, dado por 
+\begin_inset Formula $f_{0}\approx\left[R{}_{1}/(R{}_{1}+R_{2})\right]f_{t}$
+\end_inset
+
+, na qual 
+\begin_inset Formula $f_{t}=1MHz$
+\end_inset
+
+ é a frequência de ganho unitário do amplificador operacional.
+ 
+\end_layout
+
+\begin_layout Standard
+Assim, para confirmar seu funcionamento, foi projetado um circuito inversor
+ com ganho -10, conforme a figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "circ:2"
+
+\end_inset
+
+.
+ Como 
+\begin_inset Formula $\frac{V_{out}}{V_{in}}=\frac{-R_{2}}{R_{1}}=-10$
+\end_inset
+
+, escolheu-se, dentre os resistores fornecidos para o experimento, os valores
+ de 
+\begin_inset Formula $R_{1}=1k\Omega$
+\end_inset
+
+ e 
+\begin_inset Formula $R_{2}=10k\Omega$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+As ondas de entrada e saída são apresentadas no gráfico da figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "3.10"
+
+\end_inset
+
+, através das quais é possível ver que existe um aumento de -10, já que
+ as fases entre saída e entrada estão diferindo em 180 graus e os valores
+ pico a pico da saída são 10 vezes maior que o valores de entrada.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -278,50 +1959,48 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/37.png
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+centerline{
+\end_layout
 
 \end_inset
 
 
-\end_layout
+\begin_inset CommandInset include
+LatexCommand input
+filename ".lyx"
+
+\end_inset
+
+circ2.tex
+\begin_inset ERT
+status collapsed
 
 \begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Caption
 
 \begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
+Amplificador inversor
+\begin_inset CommandInset label
+LatexCommand label
+name "circ:2"
 
 \end_inset
 
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/36.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -343,19 +2022,31 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+ 
+\end_layout
+
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figuras/311fh.png
+	filename figuras/310.eps
+	scale 50
 
 \end_inset
 
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
 \begin_inset Caption
 
 \begin_layout Plain Layout
+Ondas de entrada e saída do circuito da figura 
+\begin_inset CommandInset label
+LatexCommand label
+name "3.10"
+
+\end_inset
+
 
 \end_layout
 
@@ -367,6 +2058,9 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 placement H
 wide false
@@ -374,137 +2068,18 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/382cr.png
-
-\end_inset
-
-
+ 
 \end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
 
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename figuras/39.png
+	filename figuras/311fh.eps
+	scale 50
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/39.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/39.png
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Float figure
-placement H
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename figuras/310.png
-
-\end_inset
-
-
+ 
 \end_layout
 
 \begin_layout Plain Layout
